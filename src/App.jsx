@@ -3,6 +3,7 @@ import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Navbar from "./components/Navbar";
 import Workprocess from "./sections/Workprocess";
+import Skills from "./sections/Skills";
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -19,6 +20,7 @@ const App = () => {
       <Hero />
       <Projects />
       <Workprocess />
+      <Skills />
     </div>
   );
 };

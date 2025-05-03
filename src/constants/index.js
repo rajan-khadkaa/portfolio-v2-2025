@@ -195,16 +195,20 @@ export const workProcess = [
     ],
   },
   {
-    title: "Develop",
-    logoPath: "/images/logo2.png",
+    title: "Backend",
+    logoPath: "/images/logo3.png",
     techLogo: [
       {
         path: "/images/logos/react.svg",
-        name: "React Native",
+        name: "Node.js",
         color: "#61DAFB",
       },
-      { path: "/images/logos/mern.svg", name: "MERN", color: "#28C76F" },
-      { path: "/images/logos/nextjs.svg", name: "Next.js", color: "#FFFFFF" },
+      { path: "/images/logos/mern.svg", name: "MongoDB", color: "#28C76F" },
+      {
+        path: "/images/logos/nextjs.svg",
+        name: "PostgreSQL",
+        color: "#FFFFFF",
+      },
     ],
     processWork: [
       "Developed and maintained user-facing features for the Hostinger website.",
@@ -213,13 +217,31 @@ export const workProcess = [
     ],
   },
   {
-    // title: "",
-    title: "Deploy",
-    logoPath: "/images/logo3.png",
-    techLogo: [],
-    processWork: [],
-    gap: true,
+    title: "Frontend",
+    logoPath: "/images/logo2.png",
+    techLogo: [
+      {
+        path: "/images/logos/react.svg",
+        name: "React Native",
+        color: "#61DAFB",
+      },
+      { path: "/images/logos/nextjs.svg", name: "Next.js", color: "#FFFFFF" },
+      { path: "/images/logos/react.svg", name: "React.js", color: "#61DAFB" },
+    ],
+    processWork: [
+      "Developed and maintained user-facing features for the Hostinger website.",
+      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
+      "Optimized web applications for maximum speed and scalability.",
+    ],
   },
+  // {
+  //   // title: "",
+  //   title: "Deploy",
+  //   logoPath: "/images/logo3.png",
+  //   techLogo: [],
+  //   processWork: [],
+  //   gap: true,
+  // },
 ];
 
 const expCards = [
@@ -343,6 +365,30 @@ const socialImgs = [
   },
 ];
 
+const skillListTop = [
+  { name: "React Native", path: "/images/logos/react.svg" },
+  { name: "Node.js", path: "/images/logos/node.png" },
+  { name: "Next.js", path: "/images/logos/nextjs.svg" },
+];
+const skillListBottom = [
+  { name: "MongoDB", path: "/images/logos/mern.svg" },
+  { name: "Tailwind CSS", path: "/images/logos/three.png" },
+  { name: "React.js", path: "/images/logos/react.svg" },
+  { name: "Git & Github", path: "/images/logos/git.svg" },
+  { name: "Figma", path: "/images/logos/figma.svg" },
+];
+
+const highlightColors = [
+  "#1a2a3a", // React Native
+  "#2a3a2a", // Node.js
+  "#3a3a3a", // Next.js
+  "#1a3a2a", // MongoDB
+  "#183c58", // Tailwind CSS
+  "#1a2a3a", // React.js
+  "#3a1a0a", // Git & Github
+  "#3a2a1a", // Figma
+];
+
 export {
   words,
   abilities,
@@ -355,4 +401,17 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  skillListTop,
+  skillListBottom,
+  highlightColors,
 };
+
+// "#e24e1B", // React Native
+// "#4381c1", // Node.js
+// "#f79824", // Next.js
+// "#04a777", // React.js
+// "#2176ff", // MongoDB
+// "#5b8c5a", // Tailwind CSS
+// "#818d92", // Git & Github
+// "#22aaa1", // Figma
+// "#3a1a0a", // React Native: Dark brown-orange

@@ -68,6 +68,7 @@ const Projects = () => {
               borderRadius: 10,
               overflow: "hidden",
               height: "fit-content",
+              cursor: "pointer",
             }}
           >
             <div

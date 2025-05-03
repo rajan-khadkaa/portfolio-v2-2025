@@ -244,12 +244,12 @@ section {
   }
 
   .timeline {
-    @apply absolute z-10 h-[100%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[100%] sm:h-[110%] -top-10 w-14 md:w-28 bg-black;
     /* @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black; */
   }
 
   .timeline-logo {
-    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center  border border-black-50 bg-black-100;
+    @apply md:size-20 size-14 flex-none rounded-full flex justify-center items-center  border border-black-50 bg-black-50;
     /* @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;  CHANGED*/
   }
 
@@ -477,6 +477,8 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+/* SKILLS ANIMATION */
 
 /* NAVBAR ANIMATION */
 
