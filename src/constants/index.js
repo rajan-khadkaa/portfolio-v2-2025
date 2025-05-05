@@ -199,14 +199,14 @@ export const workProcess = [
     logoPath: "/images/logo3.png",
     techLogo: [
       {
-        path: "/images/logos/react.svg",
+        path: "/images/logos/node.png",
         name: "Node.js",
         color: "#61DAFB",
       },
       { path: "/images/logos/mern.svg", name: "MongoDB", color: "#28C76F" },
       {
         path: "/images/logos/nextjs.svg",
-        name: "PostgreSQL",
+        name: "Next.js",
         color: "#FFFFFF",
       },
     ],
@@ -226,7 +226,11 @@ export const workProcess = [
         color: "#61DAFB",
       },
       { path: "/images/logos/nextjs.svg", name: "Next.js", color: "#FFFFFF" },
-      { path: "/images/logos/react.svg", name: "React.js", color: "#61DAFB" },
+      {
+        path: "/images/logos/react.svg",
+        name: "React.js",
+        color: "#61DAFB",
+      },
     ],
     processWork: [
       "Developed and maintained user-facing features for the Hostinger website.",

@@ -4,6 +4,7 @@ import Projects from "./sections/Projects";
 import Navbar from "./components/Navbar";
 import Workprocess from "./sections/Workprocess";
 import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -21,6 +22,7 @@ const App = () => {
       <Projects />
       <Workprocess />
       <Skills />
+      <Contact />
     </div>
   );
 };
