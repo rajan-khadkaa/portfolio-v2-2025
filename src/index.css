@@ -166,10 +166,10 @@ section {
       @apply h-full flex flex-col justify-between xl:w-[60%];
 
       .image-wrapper {
-        @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
+        @apply xl:h-[80vh] md:h-[50vh] h-96 relative rounded-xl;
 
-        img {
-          @apply w-full h-full object-cover rounded-xl absolute inset-0;
+        thumbnail-img {
+          @apply w-full h-full object-cover absolute inset-0 z-0;
         }
       }
 
@@ -187,10 +187,11 @@ section {
     }
 
     .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+      @apply flex md:flex-row flex-col xl:flex-col gap-5 xl:w-[40%];
 
       .image-wrapper {
-        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+        @apply xl:h-[37vh] md:h-80 lg:h-96 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+        /* @apply xl:h-[37vh] md:h-80 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;   */
       }
 
       img {
@@ -198,7 +199,7 @@ section {
       }
 
       h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+        @apply text-lg md:text-xl lg:text-2xl font-semibold;
       }
     }
   }
@@ -478,6 +479,36 @@ section {
   opacity: 1;
 }
 
+/* PROJECT SECTION OVERLAY */
+/* .info-overlay {
+  background: linear-gradient(
+    hsla(0, 0%, 21%, 0),
+    hsla(0, 0%, 0%, 0.1),
+    hsla(0, 0%, 0%, 0.2),
+    hsla(0, 0%, 0%, 0.3),
+    hsla(0, 0%, 0%, 0.4),
+    hsla(0, 0%, 0%, 0.5),
+    hsla(0, 0%, 0%, 0.6),
+    hsla(0, 0%, 0%, 0.8),
+    hsl(0, 0%, 9%)
+  );
+} */
+
+.info-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    /* #00000080 2%,
+    #00000080 20%,
+    #00000080 30%, */ #00000080 38%,
+    /* #00000080 60%,
+    #00000080 70%,
+    #00000080 80%,
+    #00000080 90%, */
+      #000000 110%
+  );
+}
+
 /* MORE ABOUT ME SECTION ANIMATION */
 .img-div {
   border-radius: 2rem;
@@ -512,6 +543,65 @@ section {
   height: 108%;
   object-fit: cover;
 }
+
+/* PROJECT INVERTED BORDER */
+
+.top-icons-div::after,
+.top-icons-div::before,
+.bottom-icons-div::after,
+.bottom-icons-div::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  position: absolute;
+}
+
+.top-icons-div::after {
+  background-color: transparent;
+  left: -20px;
+  top: 0;
+  box-shadow: 5px -5px black;
+  border-top-right-radius: 10px;
+}
+
+.top-icons-div::before {
+  background-color: transparent;
+  right: 0;
+  bottom: -20px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px -5px black;
+}
+
+.bottom-icons-div::after {
+  background-color: transparent;
+  top: 0px;
+  right: -20px;
+  border-top-left-radius: 10px;
+  box-shadow: -5px -5px black;
+}
+
+.bottom-icons-div::before {
+  background-color: transparent;
+  left: 0px;
+  bottom: -20px;
+  border-top-left-radius: 10px;
+  box-shadow: -5px -5px black;
+}
+/* .bottom-icons-div::after {
+  background-color: transparent;
+  top: -20px;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  box-shadow: -5px 5px black;
+}
+
+.bottom-icons-div::before {
+  background-color: transparent;
+  right: -20px;
+  bottom: 0;
+  border-bottom-left-radius: 10px;
+  box-shadow: -5px 5px black;
+} */
 
 /* NAVBAR ANIMATION */
 
