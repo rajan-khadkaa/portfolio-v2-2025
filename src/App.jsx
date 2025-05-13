@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Workprocess from "./sections/Workprocess";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
+// import Scene from "./components/Scene";
+import HeroTexts from "./components/HeroTexts";
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -19,6 +21,7 @@ const App = () => {
         <Navbar />
       </div>
       <Hero />
+      {/* <Scene /> */}
       <Projects />
       <Workprocess />
       <Skills />

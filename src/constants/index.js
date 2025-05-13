@@ -18,12 +18,18 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Design", imgPath: "/images/designs.svg" },
-  { text: "Mobile Apps", imgPath: "/images/code.svg" },
-  { text: "Web Apps", imgPath: "/images/concepts.svg" },
-  { text: "Design", imgPath: "/images/designs.svg" },
-  { text: "Mobile Apps", imgPath: "/images/code.svg" },
-  { text: "Web Apps", imgPath: "/images/concepts.svg" },
+  { text: "Mobile App", imgPath: "/images/designs.svg" },
+  { text: "Web App", imgPath: "/images/code.svg" },
+  { text: "UI/UX Flow", imgPath: "/images/concepts.svg" },
+  { text: "Mobile App", imgPath: "/images/designs.svg" },
+  { text: "Web App", imgPath: "/images/code.svg" },
+  { text: "UI/UX Flow", imgPath: "/images/concepts.svg" },
+  // { text: "Design", imgPath: "/images/designs.svg" },
+  // { text: "Mobile Apps", imgPath: "/images/code.svg" },
+  // { text: "Web Apps", imgPath: "/images/concepts.svg" },
+  // { text: "Design", imgPath: "/images/designs.svg" },
+  // { text: "Mobile Apps", imgPath: "/images/code.svg" },
+  // { text: "Web Apps", imgPath: "/images/concepts.svg" },
   // { text: "Design", imgPath: "/images/designs.svg" },
   // { text: "Mobile Apps", imgPath: "/images/code.svg" },
   // { text: "Web Apps", imgPath: "/images/concepts.svg" },
@@ -393,6 +399,335 @@ const highlightColors = [
   "#3a2a1a", // Figma
 ];
 
+const firstProjIcons = [
+  {
+    name: "React",
+    image: "/images/logos/illustrator.svg",
+  },
+  {
+    name: "Tailwind",
+    image: "/images/logos/node.png",
+  },
+  {
+    name: "Node.js",
+    image: "/images/logos/react.png",
+  },
+  {
+    name: "MongoDB",
+    image: "/images/logos/photoshop.svg",
+  },
+  {
+    name: "Firebase",
+    image: "/images/logos/illustrator.svg",
+  },
+  {
+    name: "Cloudinary",
+    image: "/images/logos/node.png",
+  },
+];
+const secondProjIcons = [
+  {
+    name: "React",
+    image: "/images/logos/illustrator.svg",
+  },
+  {
+    name: "Tailwind",
+    image: "/images/logos/node.png",
+  },
+  {
+    name: "Node.js",
+    image: "/images/logos/react.png",
+  },
+  {
+    name: "MongoDB",
+    image: "/images/logos/photoshop.svg",
+  },
+  {
+    name: "JWT",
+    image: "/images/logos/illustrator.svg",
+  },
+];
+const thirdProjIcons = [
+  {
+    name: "Next.js",
+    image: "/images/logos/nextjs.svg",
+  },
+  {
+    name: "Tailwind",
+    image: "/images/logos/node.png",
+  },
+];
+
+const webProjects = [
+  {
+    glink: true,
+    project1: {
+      title: "Plan-it",
+      description:
+        "Plan-It is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "React",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Node.js",
+          image: "/images/logos/react.png",
+        },
+        {
+          name: "MongoDB",
+          image: "/images/logos/photoshop.svg",
+        },
+        {
+          name: "Firebase",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Cloudinary",
+          image: "/images/logos/node.png",
+        },
+      ],
+      thumbnail: "/images/project1.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+
+    project2: {
+      title: "Plan-it",
+      description:
+        "Plan-It is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "React",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Node.js",
+          image: "/images/logos/react.png",
+        },
+        {
+          name: "MongoDB",
+          image: "/images/logos/photoshop.svg",
+        },
+        {
+          name: "JWT",
+          image: "/images/logos/illustrator.svg",
+        },
+      ],
+      thumbnail: "/images/project2.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+
+    project3: {
+      title: "Next-js Auth",
+      description:
+        "Next-js is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "Next.js",
+          image: "/images/logos/nextjs.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "/images/logos/node.png",
+        },
+      ],
+      thumbnail: "/images/project3.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+  },
+];
+const mobProjects = [
+  {
+    glink: true,
+    project1: {
+      title: "Paydrift",
+      description:
+        "Paydrift is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "React Native",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Node.js",
+          image: "/images/logos/react.png",
+        },
+        {
+          name: "MongoDB",
+          image: "/images/logos/photoshop.svg",
+        },
+        {
+          name: "Firebase",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Cloudinary",
+          image: "/images/logos/node.png",
+        },
+      ],
+      thumbnail: "/images/project3.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+
+    project2: {
+      title: "Medsync",
+      description:
+        "Medsync is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "React Native",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Node.js",
+          image: "/images/logos/react.png",
+        },
+        {
+          name: "MongoDB",
+          image: "/images/logos/photoshop.svg",
+        },
+        {
+          name: "JWT",
+          image: "/images/logos/illustrator.svg",
+        },
+      ],
+      thumbnail: "/images/project2.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+
+    project3: {
+      title: "Social App",
+      description:
+        "Next-js is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "React Native",
+          image: "/images/logos/nextjs.svg",
+        },
+        {
+          name: "Tailwind",
+          image: "/images/logos/node.png",
+        },
+      ],
+      thumbnail: "/images/project1.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+  },
+];
+const designProjects = [
+  {
+    glink: false,
+    project1: {
+      title: "SafeTrack",
+      description:
+        "SafeTrack is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "Figma",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Illustrator",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Photoshop",
+          image: "/images/logos/react.png",
+        },
+      ],
+      thumbnail: "/images/project2.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+
+    project2: {
+      title: "HRMS",
+      description:
+        "HRMS is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "Figma",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Illustrator",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Photoshop",
+          image: "/images/logos/react.png",
+        },
+      ],
+      thumbnail: "/images/project3.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+
+    project3: {
+      title: "Donate Red",
+      description:
+        "Donate Red is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+      projectIcons: [
+        {
+          name: "Figma",
+          image: "/images/logos/illustrator.svg",
+        },
+        {
+          name: "Illustrator",
+          image: "/images/logos/node.png",
+        },
+        {
+          name: "Photoshop",
+          image: "/images/logos/react.png",
+        },
+      ],
+      thumbnail: "/images/project1.png",
+      link: {
+        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+      },
+    },
+  },
+];
+
 export {
   words,
   abilities,
@@ -408,6 +743,12 @@ export {
   skillListTop,
   skillListBottom,
   highlightColors,
+  firstProjIcons,
+  secondProjIcons,
+  thirdProjIcons,
+  mobProjects,
+  webProjects,
+  designProjects,
 };
 
 // "#e24e1B", // React Native

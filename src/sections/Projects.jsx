@@ -1,5 +1,10 @@
 import React, { useState, useRef } from "react";
-import { counterItems } from "../constants";
+import {
+  counterItems,
+  mobProjects,
+  webProjects,
+  designProjects,
+} from "../constants";
 import Tilt from "react-parallax-tilt";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -57,7 +62,9 @@ const Projects = () => {
         ))}
       </div>
       <div className="w-full">
-        <ProjectInfo />
+        {domain === "mobile" && <ProjectInfo domainProjects={mobProjects} />}
+        {domain === "web" && <ProjectInfo domainProjects={webProjects} />}
+        {domain === "design" && <ProjectInfo domainProjects={designProjects} />}
       </div>
     </section>
   );

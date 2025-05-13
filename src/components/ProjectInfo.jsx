@@ -1,225 +1,356 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowUp, FaGithub } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { firstProjIcons, secondProjIcons, thirdProjIcons } from "../constants";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import BentoLink from "./BentoLink";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectInfo = () => {
+const ProjectInfo = ({ domainProjects }) => {
+  const [infoBox1, setInfoBox1] = useState(false);
+  const [infoBox2, setInfoBox2] = useState(false);
+  const [infoBox3, setInfoBox3] = useState(false);
+  const [hovered1, setHovered1] = useState(false);
+  const [hovered2, setHovered2] = useState(false);
+  const [hovered3, setHovered3] = useState(false);
   const project1Ref = useRef(null);
   const project2Ref = useRef(null);
   const project3Ref = useRef(null);
 
-  const firstProjIcons = [
-    {
-      name: "React",
-      image: "/images/logos/illustrator.svg",
-    },
-    {
-      name: "Tailwind",
-      image: "/images/logos/node.png",
-    },
-    {
-      name: "Node.js",
-      image: "/images/logos/react.png",
-    },
-    {
-      name: "MongoDB",
-      image: "/images/logos/photoshop.svg",
-    },
-    {
-      name: "Firebase",
-      image: "/images/logos/illustrator.svg",
-    },
-    {
-      name: "Cloudinary",
-      image: "/images/logos/node.png",
-    },
-  ];
-
   useGSAP(() => {
-    const projCards = [
-      project1Ref.current,
-      project2Ref.current,
-      project3Ref.current,
-    ];
-
-    projCards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-          },
-        }
-      );
-    });
+    // const projCards = [
+    //   project1Ref.current,
+    //   project2Ref.current,
+    //   project3Ref.current,
+    // ];
+    // projCards.forEach((card, index) => {
+    //   gsap.fromTo(
+    //     card,
+    //     {
+    //       y: 50,
+    //       opacity: 0,
+    //     },
+    //     {
+    //       y: 0,
+    //       opacity: 1,
+    //       duration: 1,
+    //       delay: 0.3 * (index + 1),
+    //       scrollTrigger: {
+    //         trigger: card,
+    //         start: "top bottom-=100",
+    //       },
+    //     }
+    //   );
+    // });
   }, []);
+
   return (
-    <div className="showcaselayout">
-      {/* LEFT */}
-      <div ref={project1Ref} className="first-project-wrapper">
-        {/* <div className="image-wrapper group overflow-hidden"> */}
-        <div className="image-wrapper group overflow-hidden">
-          <div className="bg-zinc-800 absolute w-full p-16 bottom-0 h-full z-10 translate-y-full group-hover:translate-y-0  transition-all duration-300 ">
-            {/* <div className="info-overlay absolute w-full py-20 px-10 bottom-0 h-[40%] z-10 translate-y-full group-hover:translate-y-0  transition-all duration-300 "> */}
-            <div className="flex flex-col gap-8">
-              <div className=" flex items-center justify-center size-24 border-2 p-3 rounded-full">
-                <img
-                  className="size-full"
-                  src="/images/logos/nextjs.svg"
-                  alt="plan-it"
-                />
-              </div>
-              <p className="text-xl">
-                Plan-It is a productivity app to save ideas, set goals, and
-                track personal growth. Save your ideas and visit later to view
-                and track. Plan-It is a productivity app to save ideas, set
-                goals, and track personal growth. Plan-It is a productivity app
-                to save ideas, set goals, and track personal growth.
-              </p>
-              <div className="w-full h-full flex flex-row flex-wrap gap-6 border-2 border-red-400">
-                {firstProjIcons.map((proj) => (
-                  <div className="flex flex-col gap-2">
-                    <div className="size-12 md:size-22 p-4 border-2 border-gray-700 rounded-2xl">
-                      <img
-                        className="size-full"
-                        src={proj.image}
-                        alt={proj.image}
-                      />
-                    </div>
-                    <p>{proj.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="w-full h-full">
-            <img
-              className="thumbnail-img"
-              src="/images/project1.png"
-              alt="Planit-webapp"
-            />
-          </div>
-          <div className="top-icons-div  flex gap-2 justify-center items-center absolute z-20 p-3 bg-black right-0 top-0 rounded-bl-4xl ">
-            <a
-              className="p-3 rotate-45 rounded-full bg-white-50 text-black flex items-center justify-center"
-              href="https://github.com/rajan-khadkaa/plan-it"
-              target="_blank"
+    <>
+      {domainProjects.map((domProjects, index) => (
+        <div key={index} className="showcaselayout">
+          {/* TOP */}
+          <div ref={project1Ref} className="first-project-wrapper">
+            <div
+              onMouseEnter={() => setHovered1(true)}
+              onMouseLeave={() => setHovered1(false)}
+              className="image-wrapper info-hover-box overflow-hidden group relative"
             >
-              {" "}
-              <FaArrowUp
-                className="group-hover:animate-bounce group-hover:translate-x-[0px] group-hover:translate-y-1"
-                size={20}
-              />
-            </a>
-          </div>
-        </div>
-        <div className="text-content">
-          {/* <h2>
-            A productivity app that lets you store your ideas, goals and track
-            them. All in Planit.
-          </h2>
-          <p className="text-white-50 md:text-xl">
-            A webapp developed using react, node,js, mongodb and tailwind css
-            for a fast, user-friendly experience.
-          </p> */}
-          <div className="flex justify-between">
-            <h2>Plan-It</h2>
-            <a
-              className="size-14 rounded-full bg-zinc-800 hover:bg-zinc-600 transition-colors duration-200 flex items-center justify-center"
-              // className="p-2 border-2 flex items-center justify-center"
-              href="https://github.com/rajan-khadkaa/plan-it"
-              target="_blank"
-            >
-              {" "}
-              <FaGithub size={24} />
-              {/* <FaGithub size={20} /> */}
-              {/* <p className="md:text-xl">Github</p> */}
-            </a>
-          </div>
-          <p className="text-gray-400 md:text-xl -mt-6"> Productivity App</p>
-        </div>
-      </div>
-      {/* RIGHT */}
-      <div className="project-list-wrapper overflow-hidden">
-        <div ref={project2Ref} className="project">
-          <div className="group rounded-xl relative overflow-hidden">
-            <div className="bg-zinc-800 absolute w-full p-10 bottom-0 h-full z-10 translate-y-full group-hover:translate-y-0  transition-all duration-300 ">
-              {/* <div className="info-overlay absolute w-full py-20 px-10 bottom-0 h-[40%] z-10 translate-y-full group-hover:translate-y-0  transition-all duration-300 "> */}
-              <h2>contents here</h2>
-            </div>
-            <div className="image-wrapper bg-[#ffefdb]">
-              <img src="/images/project2.png" alt="Spendly-webapp" />
-            </div>
-            <div className="top-icons-div  flex gap-2 justify-center items-center absolute z-20 p-3 bg-black right-0 top-0 rounded-bl-4xl ">
-              <a
-                className="p-3 rotate-45 rounded-full bg-white-50 text-black flex items-center justify-center"
-                href="https://github.com/rajan-khadkaa/plan-it"
-                target="_blank"
+              {/* OVERLAY-INFO ON HOVER */}
+              <div
+                className={`top-text-content ${
+                  hovered1 ? "translate-x-0" : "-translate-x-[100%]"
+                }`}
               >
-                {" "}
-                <FaArrowUp
-                  className="group-hover:animate-bounce group-hover:translate-x-[0px] group-hover:translate-y-1"
-                  size={20}
+                {/* OVERLAY-INFO WITH BUTTON */}
+                {/* <div
+            className={`top-text-content ${
+              infoBox1 ? "translate-x-0" : "-translate-x-[100%]"
+            }`}
+          > */}
+                <div className="info-container">
+                  <div className="h-full">
+                    <div className="flex flex-col items-start  p-8 rounded-2xl">
+                      <div className="flex gap-6 items-center">
+                        <h2 className="text-3xl font-bold">
+                          {domProjects.project1.title}
+                        </h2>
+                        {/* <a
+                      className="size-14 rounded-full bg-zinc-800 hover:bg-zinc-600 transition-colors duration-200 flex items-center justify-center"
+                      href="https://github.com/rajan-khadkaa/plan-it"
+                      target="_blank"
+                    >
+                      {" "}
+                      <FaGithub size={24} />
+                    </a> */}
+                      </div>
+
+                      <p className="text-gray-400 mt-2 md:text-xl">
+                        {domProjects.project1.description}
+                      </p>
+                    </div>
+                    <div className="flex h-fit flex-wrap w-full flex-row gap-6 p-8 rounded-2xl">
+                      {domProjects.project1.projectIcons.map((proj) => (
+                        <div
+                          key={proj.name}
+                          className="flex flex-col w-12 sm:w-14 md:w-18 lg:w-22 items-center gap-2"
+                        >
+                          <div className="used-tech size-12 sm:size-14 md:size-18 lg:size-18 p-2 md:p-4 rounded-full">
+                            <img
+                              className="size-full"
+                              src={proj.image}
+                              alt={proj.image}
+                            />
+                          </div>
+                          <p>{proj.name}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  {/* OVERLAY-INFO ON HOVER */}
+                  <div
+                    className={`transition-transform duration-300 border-2 opacity-0 view-info-div`}
+                  >
+                    {/* OVERLAY-INFO WITH BUTTON */}
+                    {/* <div
+                onClick={() => setInfoBox1((prev) => !prev)}
+                className={`${
+                  !infoBox1 && "-translate-x-[100%]"
+                } cursor-pointer transition-transform duration-300 ${
+                  hovered1 && "translate-x-0"
+                } view-info-div`}
+              > */}
+                    {infoBox1 ? (
+                      <MdKeyboardArrowDown size={24} />
+                    ) : (
+                      <MdKeyboardArrowUp
+                        className="mt-1"
+                        // className={`mt-1 ${"animate-bounce"}`}
+                        size={24}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* THUMBNAIL CONTENTS */}
+              <div className="w-full  border-2 border-blue-400 h-[80vh] overflow-hidden rounded-2xl">
+                <img
+                  className="thumbnail-img object-cover w-full "
+                  src={domProjects.project1.thumbnail}
+                  alt="Planit-webapp"
                 />
-              </a>
+              </div>
+
+              {/* TOP CORNER ICONS */}
+              <BentoLink
+                gitlink={domProjects.glink}
+                github={domProjects.project1.link.githubLink}
+                demo={domProjects.project1.link.projLink}
+                hover={hovered1}
+              />
             </div>
           </div>
-          <div className="flex justify-between items-center mt-2">
-            <div className="flex flex-col gap-1">
-              <h2>Spendly</h2>
-              <p className="text-gray-400 font-normal">
-                Income-Expense Tracker
-              </p>
-            </div>
-            <a
-              className="size-13 rounded-full bg-zinc-800 hover:bg-zinc-600 flex items-center justify-center"
-              // className="p-2 border-2 flex items-center justify-center"
-              href="https://github.com/rajan-khadkaa/plan-it"
-              target="_blank"
+          {/* BOTTOM */}
+          <div className="project-list-wrapper h-[60vh]">
+            {/* SECOND PROJECT */}
+            <div
+              ref={project2Ref}
+              className="project w-full overflow-hidden h-full"
             >
-              {" "}
-              <FaGithub size={22} />
-              {/* <FaGithub size={20} /> */}
-              {/* <p className="md:text-xl">Github</p> */}
-            </a>
+              <div
+                onMouseEnter={() => setHovered2(true)}
+                onMouseLeave={() => setHovered2(false)}
+                className="image-wrapper-bottom overflow-hidden relative group"
+              >
+                {/* OVERLAY-INFO ON HOVER */}
+                <div
+                  className={`top-text-content-bottom ${
+                    hovered2 ? "translate-x-0" : "-translate-x-[100%]"
+                  }`}
+                >
+                  {/* OVERLAY-INFO WITH BUTTON */}
+                  {/* <div
+              className={`top-text-content-bottom ${
+                infoBox2 ? "translate-x-0" : "-translate-x-[100%]"
+              }`}
+            > */}
+                  <div className="info-container-bottom flex flex-row">
+                    <div className="h-full">
+                      <div className="flex flex-col items-start  p-8 rounded-2xl">
+                        <div className="flex gap-6 items-center">
+                          <h2 className="text-3xl font-bold">
+                            {domProjects.project2.title}
+                          </h2>
+                        </div>
+
+                        <p className="text-gray-400 mt-2 md:text-xl">
+                          {domProjects.project2.description}
+                        </p>
+                      </div>
+                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 p-8 rounded-2xl">
+                        {domProjects.project2.projectIcons.map((proj) => (
+                          <div
+                            key={proj.name}
+                            className="flex flex-col w-12 sm:w-14 md:w-18 lg:w-22 items-center gap-2"
+                          >
+                            <div className="used-tech size-12 sm:size-14 md:size-18 lg:size-18 p-2 md:p-4 rounded-full">
+                              <img
+                                className="size-full"
+                                src={proj.image}
+                                alt={proj.image}
+                              />
+                            </div>
+                            <p>{proj.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {/* OVERLAY-INFO ON HOVER */}
+                    <div
+                      className={`transition-transform duration-300 border-2 opacity-0 view-info-div-bottom`}
+                    >
+                      {/* OVERLAY-INFO WITH BUTTON */}
+                      {/* <div
+                  onClick={() => setInfoBox2((prev) => !prev)}
+                  className={`${
+                    !infoBox2 && "-translate-x-[100%]"
+                  } cursor-pointer transition-transform duration-300 ${
+                    hovered2 && "translate-x-0"
+                  } view-info-div-bottom`}
+                > */}
+                      {infoBox2 ? (
+                        <MdKeyboardArrowDown size={24} />
+                      ) : (
+                        <MdKeyboardArrowUp
+                          className="mt-1"
+                          // className={`mt-1 ${"animate-bounce"}`}
+                          size={24}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* THUMBNAIL CONTENTS */}
+                <div className="w-full  border-2 border-red-400 overflow-hidden rounded-2xl">
+                  <img
+                    className="thumbnail-img object-cover w-full "
+                    src={domProjects.project2.thumbnail}
+                    alt="Planit-webapp"
+                  />
+                </div>
+                {/* TOP CORNER ICONS */}
+                <BentoLink
+                  gitlink={domProjects.glink}
+                  github={domProjects.project2.link.githubLink}
+                  demo={domProjects.project2.link.projLink}
+                  hover={hovered2}
+                />
+              </div>
+            </div>
+            {/* THIRD PROJECT */}
+            <div
+              ref={project3Ref}
+              className="project w-full overflow-hidden h-full"
+            >
+              <div
+                onMouseEnter={() => setHovered3(true)}
+                onMouseLeave={() => setHovered3(false)}
+                className="image-wrapper-bottom overflow-hidden relative group"
+              >
+                {/* OVERLAY-INFO ON HOVER */}
+                <div
+                  className={`top-text-content-bottom ${
+                    hovered3 ? "translate-x-0" : "-translate-x-[100%]"
+                  }`}
+                >
+                  {/* OVERLAY-INFO WITH BUTTON */}
+                  {/* <div
+              className={`top-text-content-bottom ${
+                infoBox3 ? "translate-x-0" : "-translate-x-[100%]"
+              }`}
+            > */}
+                  <div className="info-container-bottom flex flex-row">
+                    <div className="h-full">
+                      <div className="flex flex-col items-start  p-8 rounded-2xl">
+                        <div className="flex gap-6 items-center">
+                          <h2 className="text-3xl font-bold">
+                            {domProjects.project3.title}
+                          </h2>
+                        </div>
+
+                        <p className="text-gray-400 mt-2 md:text-xl">
+                          {domProjects.project3.description}
+                        </p>
+                      </div>
+                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 p-8 rounded-2xl">
+                        {domProjects.project3.projectIcons.map((proj) => (
+                          <div
+                            key={proj.name}
+                            className="flex flex-col w-12 sm:w-14 md:w-18 lg:w-22 items-center gap-2"
+                          >
+                            <div className="used-tech size-12 sm:size-14 md:size-18 lg:size-18 p-2 md:p-4 rounded-full">
+                              <img
+                                className="size-full"
+                                src={proj.image}
+                                alt={proj.image}
+                              />
+                            </div>
+                            <p>{proj.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {/* OVERLAY-INFO ON HOVER */}
+                    <div
+                      className={`transition-transform duration-300 border-2 opacity-0 view-info-div-bottom`}
+                    >
+                      {/* OVERLAY-INFO WITH BUTTON */}
+                      {/* <div
+                  onClick={() => setInfoBox3((prev) => !prev)}
+                  className={`${
+                    !infoBox3 && "-translate-x-[100%]"
+                  } cursor-pointer transition-transform duration-300 ${
+                    hovered3 && "translate-x-0"
+                  } view-info-div-bottom`}
+                > */}
+                      {infoBox3 ? (
+                        <MdKeyboardArrowDown size={24} />
+                      ) : (
+                        <MdKeyboardArrowUp
+                          className="mt-1"
+                          // className={`mt-1 ${"animate-bounce"}`}
+                          size={24}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* THUMBNAIL CONTENTS */}
+                <div className="w-full overflow-hidden border-2 border-green-400 rounded-2xl">
+                  <img
+                    className="thumbnail-img object-cover w-full"
+                    src={domProjects.project3.thumbnail}
+                    alt="Planit-webapp"
+                  />
+                </div>
+                {/* TOP CORNER ICONS */}
+                <BentoLink
+                  gitlink={domProjects.glink}
+                  github={domProjects.project3.link.githubLink}
+                  demo={domProjects.project3.link.projLink}
+                  hover={hovered3}
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div ref={project3Ref} className="project">
-          <div className="image-wrapper bg-[#ffefdb]">
-            <img src="/images/project3.png" alt="Rock-paper-chimp-webapp" />
-          </div>
-          <div className="flex justify-between items-center mt-2">
-            <div className="flex flex-col gap-1">
-              <h2>Rock-Paper-Chimp</h2>
-              <p className="text-gray-400 font-normal">Rock Paper Scissor</p>
-            </div>
-            <a
-              className="size-13 rounded-full bg-zinc-800 hover:bg-zinc-600 flex items-center justify-center"
-              // className="p-2 border-2 flex items-center justify-center"
-              href="https://github.com/rajan-khadkaa/plan-it"
-              target="_blank"
-            >
-              {" "}
-              <FaGithub size={22} />
-              {/* <FaGithub size={20} /> */}
-              {/* <p className="md:text-xl">Github</p> */}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+      ))}
+    </>
   );
 };
 

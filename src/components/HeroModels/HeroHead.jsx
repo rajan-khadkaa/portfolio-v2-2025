@@ -1,0 +1,56 @@
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Environment } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
+import { Head } from "./Head.jsx";
+import { HeadOpt } from "./HeadOpt.jsx";
+import HeroHeadLight from "./HeroHeadLight.jsx"; // ✅ Import the light component
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { Scene } from "./Scene.jsx";
+
+const HeroHead = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const headRef = useRef();
+
+  // useGSAP(() => {
+  //   if (headRef.current) {
+  //     headRef.current.rotation.y = -Math.PI / 4;
+  //     gsap.to(headRef.current.rotation, {
+  //       y: -Math.PI / 1.4,
+  //       duration: 2,
+  //     });
+  //   }
+  // }, []);
+
+  return (
+    <Canvas camera={{ position: [8, 0, 8], fov: 20 }}>
+      {/* Lighting */}
+      {/* <Environment preset="forest" /> */}
+      <Environment preset="warehouse" background={false} intensity={0.01} />
+      <HeroHeadLight /> {/* ✅ Add your custom lights here */}
+      {/* Camera Controls */}
+      <OrbitControls
+        enablePan={false}
+        maxDistance={6.4}
+        minDistance={8}
+        // minDistance={5}
+        minPolarAngle={Math.PI / 2}
+        maxPolarAngle={Math.PI / 2}
+      />
+      {/* Model */}
+      <group
+        ref={headRef}
+        scale={isMobile ? 0.7 : 1}
+        position={[0, -0.8, 0]}
+        rotation={[0, -Math.PI / 1.4, 0]}
+        // remove from here to add in gsap above
+      >
+        {/* <Head /> */}
+        {/* <Scene /> */}
+        <HeadOpt />
+      </group>
+    </Canvas>
+  );
+};
+
+export default HeroHead;

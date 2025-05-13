@@ -1,10 +1,13 @@
 import React from "react";
 import Button from "../components/Button.jsx";
+// import Scene from "../components/Scene.jsx";
 import { words } from "../constants/index.js";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Domain from "./Domain.jsx";
+import HeroHead from "../components/HeroModels/HeroHead.jsx";
+import HeroTexts from "../components/HeroTexts.jsx";
 
 const Hero = () => {
   useGSAP(() => {
@@ -25,7 +28,11 @@ const Hero = () => {
   });
 
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section
+      id="home"
+      className="relative hero-wrapper -pt-8 flex items-start overflow-hidden"
+    >
+      {/* <section id="home" className="relative overflow-hidden"> */}
       <div className="absolute top-0 left-0 z-10">
         {/* <img src="/images/bg.png" alt="" /> */}
       </div>
@@ -35,13 +42,15 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-fit w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Rajan, Mobile/Web Application developer, looking for
-              internship.
+              Hi, I’m Rajan, Mobile/Web App Developer
             </p>
             <div className="hero-text">
-              <h1>
-                I do
-                <span className="slide">
+              <div className="flex flex-row flex-wrap items-center">
+                <h1 className="mr-5">I build</h1>
+                <div className="bflex flex-row -ml-10 items-center">
+                  <HeroTexts />
+                </div>
+                {/* <span className="slide">
                   <span className="wrapper ">
                     {words.map((word, index) => (
                       <span
@@ -57,9 +66,9 @@ const Hero = () => {
                       </span>
                     ))}
                   </span>
-                </span>
-              </h1>
-              <h1>that solves</h1>
+                </span> */}
+              </div>
+              <h1>that solve</h1>
               <h1>real problems.</h1>
               {/* <h1>that Deliver Results</h1> */}
             </div>
@@ -72,9 +81,14 @@ const Hero = () => {
           </div>
         </header>
       </div>
-      <figure className="hero-3d-layout">
-        <HeroExperience />
-      </figure>
+      <div className="w-[50vw] absolute right-0 h-[100vh] overflow-hidden flex justify-center items-center mr-8">
+        <figure className="hero-3d-layout">
+          {/* <figure className="hero-3d-layout border-2"> */}
+          {/* <HeroExperience /> */}
+          {/* <HeroHead /> */}
+        </figure>
+      </div>
+      {/* <Scene /> */}
       {/* <Domain /> */}
     </section>
   );
