@@ -7,6 +7,7 @@ import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 // import Scene from "./components/Scene";
 import HeroTexts from "./components/HeroTexts";
+import Footer from "./sections/Footer";
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -26,6 +27,7 @@ const App = () => {
       <Workprocess />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   );
 };

@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FaArrowUp, FaGithub } from "react-icons/fa6";
 
 const BentoLink = ({ github, demo, hover, gitlink }) => {
-  useEffect(() => {
-    console.log("received boolean: ", gitlink);
-  }, []);
   return (
     <div className="top-icons-div  flex gap-2 justify-center items-center absolute z-20 p-3 bg-black right-0 top-0 rounded-bl-4xl  ">
       {gitlink && (

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import TitleHeader from "../components/TitleHeader";
 import profImage from "/images/profile/profile.png";
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/outline";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -27,7 +28,21 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
+    setLoading(true);
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      );
+      setForm({ email: "", message: "" });
+      alert("Email sent successfully.");
+    } catch (error) {
+      console.log("EmailJS Error: ", error);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <section id="contact" className="flex-center section-padding">
@@ -68,8 +83,8 @@ const Contact = () => {
                 </div>
               </div>
               <button className="w-full mt-6" onClick={handleEmailCopy}>
-                <div className="px-4 py-4 rounded-lg bg-black-200 hover:bg-gray-700 flex justify-center items-center relative cursor-pointer overflow-hidden group ">
-                  <div className="bg-circle" />
+                <div className="px-4 py-4 rounded-lg border-2 border-zinc-800 hover:border-zinc-700  bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 flex justify-center items-center relative cursor-pointer overflow-hidden group ">
+                  {/* <div className="bg-circle" /> */}
                   <p className="text">
                     {copied ? "Email Copied!" : "Copy Email"}
                   </p>
@@ -94,7 +109,7 @@ const Contact = () => {
                 <div>
                   <label htmlFor="email">Your Email</label>
                   <input
-                    className="placeholder-gray-500 "
+                    className="placeholder-zinc-600 bg-zinc-900"
                     type="email"
                     id="email"
                     name="email"
@@ -108,7 +123,7 @@ const Contact = () => {
                 <div>
                   <label htmlFor="message">Your Message</label>
                   <textarea
-                    className="placeholder-gray-500 "
+                    className="placeholder-zinc-600 bg-zinc-900"
                     id="message"
                     name="message"
                     value={form.message}
@@ -119,7 +134,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
