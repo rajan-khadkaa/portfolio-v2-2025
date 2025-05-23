@@ -1,0 +1,17 @@
+<svg width="205" height="144" viewBox="0 0 205 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="71.4426" cy="72.0001" r="71.4426" fill="#B3CFF9"/>
+<circle cx="133.048" cy="71.9998" r="71.4426" fill="#B3CFF9"/>
+<mask id="mask0_27_1003" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="143" height="144">
+<circle cx="71.4426" cy="72.0001" r="71.4426" fill="#2A6CFF"/>
+</mask>
+<g mask="url(#mask0_27_1003)">
+<circle cx="133.048" cy="71.9998" r="71.4426" fill="#2A6CFF"/>
+</g>
+<path d="M75.1943 36.6124V31.2709L46.9166 34.0688L75.1943 36.6124Z" fill="#2A6CFF"/>
+<path d="M64.9484 32.2728V25.2621L106.34 28.9344L64.9484 32.2728Z" fill="#B3CFF9"/>
+<path d="M70.9532 92.0999V84.0876L11.529 88.2845L70.9532 92.0999Z" fill="#2A6CFF"/>
+<path d="M49.5099 85.6179L49.673 76.2717L116.337 82.3325L49.5099 85.6179Z" fill="#B3CFF9"/>
+<path d="M70.9533 62.6523V54.64L37.5689 58.8369L70.9533 62.6523Z" fill="#2A6CFF"/>
+<path d="M80.682 120.423V115.082L43.1902 117.88L80.682 120.423Z" fill="#2A6CFF"/>
+<path d="M67.0977 116.084V109.073L121.977 112.746L67.0977 116.084Z" fill="#B3CFF9"/>
+</svg>

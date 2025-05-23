@@ -64,7 +64,7 @@ const HeroTexts = () => {
   return (
     <div
       ref={parentRef}
-      className="w-[400px] box-border ml-10 h-[80px] relative overflow-hidden"
+      className="w-[200px] lg:w-[400px]  box-border ml-10 h-[60px] relative overflow-hidden"
     >
       <div
         ref={childRef1}
@@ -73,17 +73,17 @@ const HeroTexts = () => {
         <div className="flex translate-y-[50%]">
           <h1
             ref={textRef}
-            className="flex flex-auto w-[400px] justify-baseline items-center"
+            className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center"
           >
             Mobile Apps
           </h1>
-          <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+          <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
             Web Apps
           </h1>
-          <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+          <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
             Interfaces
           </h1>
-          <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+          <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
             Mobile Apps
           </h1>
         </div>
@@ -92,17 +92,17 @@ const HeroTexts = () => {
         ref={childRef2}
         className={`md:text-[60px] h-full text-[30px] font-semibold z-10 pointer-events-none flex text-white absolute gap-0 right-0 bottom-0 overflow-hidden`}
       >
-        <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
           Mobile Apps
         </h1>
-        <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
           Interfaces
         </h1>
-        <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
           Web Apps
         </h1>
 
-        <h1 className="flex flex-auto w-[400px] justify-baseline items-center">
+        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
           Mobile Apps
         </h1>
       </div>

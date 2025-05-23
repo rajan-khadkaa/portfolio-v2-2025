@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import TitleHeader from "../components/TitleHeader";
-import profImage from "/images/profile/profile.png";
+import profImage from "/images/other-images/profile.png";
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/outline";
 import emailjs from "@emailjs/browser";
 
@@ -46,23 +46,25 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="flex-center section-padding">
-      <div className="w-full h-full px-0 sm:px-4 md:px-10 ">
+      <div className="w-full h-full">
         <TitleHeader
           title="Get in Touch – Let’s Connect"
           sub="Have questions or ideas? Let’s talk!"
         />
         <div className="grid-12-cols mt-16">
-          <div className="xl:col-span-5 ">
-            <div className="flex-left card-border rounded-xl p-2 sm:p-4 md:p-10">
-              <h1 className="font-semibold text-3xl">More about me</h1>
+          <div className="xl:col-span-6 ">
+            <div className="flex-left card-border rounded-xl p-6 md:p-10">
+              <h1 className="font-semibold mt-2 lg:mt-0 text-3xl">
+                More about me
+              </h1>
               <div className="flex flex-col text-lg">
                 <p className=" mt-6 text-gray-400 ">
                   {/* <p className="text-lg max-w-[290px] mt-6 text-gray-400"> */}
-                  I’m a dedicated developer skilled in React Native, MERN stack,
-                  and Next.js, looking for internships to work with the best.
+                  I’m a dedicated developer skilled in MERN stack and Next.js,
+                  looking for internships where I can grow, contribute, and
+                  learn from real-world projects..
                   <br /> <br /> When I’m not developing, I sketch app ideas,
-                  watch classic movies for fun, and keep an eye on tech trends
-                  to stay ahead of the game.
+                  watch classic movies for fun, and keep an eye on tech trends.
                 </p>
 
                 {/* <div className="img-div border-2 border-gray-800 bg-none">
@@ -85,7 +87,7 @@ const Contact = () => {
               <button className="w-full mt-6" onClick={handleEmailCopy}>
                 <div className="px-4 py-4 rounded-lg border-2 border-zinc-800 hover:border-zinc-700  bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 flex justify-center items-center relative cursor-pointer overflow-hidden group ">
                   {/* <div className="bg-circle" /> */}
-                  <p className="text">
+                  <p className="text uppercase">
                     {copied ? "Email Copied!" : "Copy Email"}
                   </p>
                   {/* <div className="arrow-wrapper">
@@ -99,8 +101,8 @@ const Contact = () => {
               </button>
             </div>
           </div>
-          <div className="xl:col-span-7">
-            <div className="flex-center card-border rounded-xl p-2 sm:p-4 md:p-10">
+          <div className="xl:col-span-6">
+            <div className="flex-center card-border rounded-xl p-6 md:p-10">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
@@ -142,7 +144,7 @@ const Contact = () => {
                     </p>
                     <div className="arrow-wrapper">
                       <img
-                        src="/images/arrow-down.svg"
+                        src="/images/other-images/arrow-down.svg"
                         alt="arrow"
                         className="-rotate-90"
                       />

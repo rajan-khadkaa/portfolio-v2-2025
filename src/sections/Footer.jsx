@@ -5,10 +5,10 @@ import { ArrowUpIcon } from "@heroicons/react/16/solid";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="flex-wrap w-full flex justify-between">
+      <div className="flex-wrap flex-col md:flex-row gap-3 w-full flex justify-between">
         {/* <div className="footer-container border-2"> */}
         <div className="flex items-center justify-center md:justify-baseline min-w-fit">
-          <p>©{new Date().getFullYear} Rajan | All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Rajan | All rights reserved.</p>
         </div>
         <div className="socials min-w-fit">
           {socialImgs.map((img) => (

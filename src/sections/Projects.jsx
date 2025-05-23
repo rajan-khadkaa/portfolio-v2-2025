@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import {
   counterItems,
-  mobProjects,
+  // mobProjects,
   webProjects,
   designProjects,
 } from "../constants";
@@ -13,7 +13,7 @@ import ProjectInfo from "../components/ProjectInfo";
 
 const Projects = () => {
   const sectionRef = useRef(null);
-  const [domain, setDomain] = useState("mobile");
+  const [domain, setDomain] = useState("web");
 
   useGSAP(() => {
     gsap.fromTo(
@@ -29,8 +29,12 @@ const Projects = () => {
   });
 
   return (
-    <section ref={sectionRef} id="projects" className="app-showcase">
-      <div className="mx-auto grid-3-cols mb-20 w-full">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="app-showcase section-padding"
+    >
+      <div className="mx-auto grid-3-cols mb-10 lg:mb-20 w-full">
         {counterItems.map((item) => (
           <Tilt
             key={item.label}
@@ -41,7 +45,7 @@ const Projects = () => {
             tiltMaxAngleX={3}
             tiltMaxAngleY={3}
             style={{
-              borderRadius: 10,
+              borderRadius: 12,
               overflow: "hidden",
               height: "fit-content",
               cursor: "pointer",
@@ -50,10 +54,10 @@ const Projects = () => {
             <div
               onClick={() => setDomain(item.domain)}
               className={`${
-                item.domain === domain ? "border-[1.5px] border-gray-500" : ""
-              } bg-zinc-900 p-10 flex flex-col justify-center rounded-2xl`}
+                item.domain === domain ? "border-zinc-700" : "border-zinc-900"
+              } border-[1.5px] bg-zinc-900 p-10 flex flex-col justify-center rounded-2xl`}
             >
-              <div className="text-white-50 text-lg mb-4">Show me</div>
+              <div className="text-white-50 text-lg mb-4">Let's see</div>
               <div className="counter-number text-white text-4xl font-bold mb-2">
                 {item.label}
               </div>
@@ -62,7 +66,7 @@ const Projects = () => {
         ))}
       </div>
       <div className="w-full">
-        {domain === "mobile" && <ProjectInfo domainProjects={mobProjects} />}
+        {/* {domain === "mobile" && <ProjectInfo domainProjects={mobProjects} />} */}
         {domain === "web" && <ProjectInfo domainProjects={webProjects} />}
         {domain === "design" && <ProjectInfo domainProjects={designProjects} />}
       </div>

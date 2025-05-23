@@ -3,13 +3,14 @@ import { FaArrowUp, FaGithub } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { firstProjIcons, secondProjIcons, thirdProjIcons } from "../constants";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import BentoLink from "./BentoLink";
+import ProjectIcons from "./ProjectIcons";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectInfo = ({ domainProjects }) => {
+  //three infoBox required for btn click info box
   const [infoBox1, setInfoBox1] = useState(false);
   const [infoBox2, setInfoBox2] = useState(false);
   const [infoBox3, setInfoBox3] = useState(false);
@@ -66,15 +67,16 @@ const ProjectInfo = ({ domainProjects }) => {
               >
                 {/* OVERLAY-INFO WITH BUTTON */}
                 {/* <div
-            className={`top-text-content ${
-              infoBox1 ? "translate-x-0" : "-translate-x-[100%]"
-            }`}
-          > */}
+                  className={`top-text-content ${
+                  infoBox1 ? "translate-x-0" : "-translate-x-[100%]"
+                  }`}
+                  > */}
                 <div className="info-container">
-                  <div className="h-full">
-                    <div className="flex flex-col items-start  p-8 rounded-2xl">
+                  <div className="h-full py-6 px-6 lg:py-8 lg:px-8">
+                    <div className="flex flex-col px-0 pb-5 pt-2 lg:pb-8 lg:px-2 lg:pt-0 items-start rounded-2xl">
+                      {/* <div className="flex flex-col mb-4 lg:mb-8 items-start rounded-2xl"> */}
                       <div className="flex gap-6 items-center">
-                        <h2 className="text-3xl font-bold">
+                        <h2 className="text-2xl font-bold">
                           {domProjects.project1.title}
                         </h2>
                         {/* <a
@@ -87,25 +89,17 @@ const ProjectInfo = ({ domainProjects }) => {
                     </a> */}
                       </div>
 
-                      <p className="text-gray-400 mt-2 md:text-xl">
+                      <p className="text-gray-400 mt-2 md:text-lg">
                         {domProjects.project1.description}
                       </p>
                     </div>
-                    <div className="flex h-fit flex-wrap w-full flex-row gap-6 p-8 rounded-2xl">
+                    <div className="flex h-fit flex-wrap w-full flex-row gap-6 sm:px-8 lg:px-2 rounded-2xl">
                       {domProjects.project1.projectIcons.map((proj) => (
-                        <div
+                        <ProjectIcons
                           key={proj.name}
-                          className="flex flex-col w-12 sm:w-14 md:w-18 lg:w-22 items-center gap-2"
-                        >
-                          <div className="used-tech size-12 sm:size-14 md:size-18 lg:size-18 p-2 md:p-4 rounded-full">
-                            <img
-                              className="size-full"
-                              src={proj.image}
-                              alt={proj.image}
-                            />
-                          </div>
-                          <p>{proj.name}</p>
-                        </div>
+                          name={proj.name}
+                          image={proj.image}
+                        />
                       ))}
                     </div>
                   </div>
@@ -121,7 +115,7 @@ const ProjectInfo = ({ domainProjects }) => {
                 } cursor-pointer transition-transform duration-300 ${
                   hovered1 && "translate-x-0"
                 } view-info-div`}
-              > */}
+                > */}
                     {infoBox1 ? (
                       <MdKeyboardArrowDown size={24} />
                     ) : (
@@ -136,9 +130,9 @@ const ProjectInfo = ({ domainProjects }) => {
               </div>
 
               {/* THUMBNAIL CONTENTS */}
-              <div className="w-full  border-2 border-blue-400 h-[80vh] overflow-hidden rounded-2xl">
+              <div className="thumbnail-img-wrapper">
                 <img
-                  className="thumbnail-img object-cover w-full "
+                  className="thumbnail-img"
                   src={domProjects.project1.thumbnail}
                   alt="Planit-webapp"
                 />
@@ -154,12 +148,9 @@ const ProjectInfo = ({ domainProjects }) => {
             </div>
           </div>
           {/* BOTTOM */}
-          <div className="project-list-wrapper h-[60vh]">
+          <div className="project-list-wrapper">
             {/* SECOND PROJECT */}
-            <div
-              ref={project2Ref}
-              className="project w-full overflow-hidden h-full"
-            >
+            <div ref={project2Ref} className="project w-full overflow-hidden">
               <div
                 onMouseEnter={() => setHovered2(true)}
                 onMouseLeave={() => setHovered2(false)}
@@ -173,54 +164,46 @@ const ProjectInfo = ({ domainProjects }) => {
                 >
                   {/* OVERLAY-INFO WITH BUTTON */}
                   {/* <div
-              className={`top-text-content-bottom ${
-                infoBox2 ? "translate-x-0" : "-translate-x-[100%]"
-              }`}
-            > */}
+                  className={`top-text-content-bottom ${
+                  infoBox2 ? "translate-x-0" : "-translate-x-[100%]"
+                  }`}
+                  > */}
                   <div className="info-container-bottom flex flex-row">
                     <div className="h-full">
                       <div className="flex flex-col items-start  p-8 rounded-2xl">
                         <div className="flex gap-6 items-center">
-                          <h2 className="text-3xl font-bold">
+                          <h2 className="text-2xl font-bold">
                             {domProjects.project2.title}
                           </h2>
                         </div>
 
-                        <p className="text-gray-400 mt-2 md:text-xl">
+                        <p className="text-gray-400 mt-2 md:text-base">
                           {domProjects.project2.description}
                         </p>
                       </div>
-                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 p-8 rounded-2xl">
+                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 px-8 rounded-2xl">
                         {domProjects.project2.projectIcons.map((proj) => (
-                          <div
+                          <ProjectIcons
                             key={proj.name}
-                            className="flex flex-col w-12 sm:w-14 md:w-18 lg:w-22 items-center gap-2"
-                          >
-                            <div className="used-tech size-12 sm:size-14 md:size-18 lg:size-18 p-2 md:p-4 rounded-full">
-                              <img
-                                className="size-full"
-                                src={proj.image}
-                                alt={proj.image}
-                              />
-                            </div>
-                            <p>{proj.name}</p>
-                          </div>
+                            name={proj.name}
+                            image={proj.image}
+                          />
                         ))}
                       </div>
                     </div>
                     {/* OVERLAY-INFO ON HOVER */}
                     <div
-                      className={`transition-transform duration-300 border-2 opacity-0 view-info-div-bottom`}
+                      className={`transition-transform duration-300 opacity-0 view-info-div-bottom`}
                     >
                       {/* OVERLAY-INFO WITH BUTTON */}
                       {/* <div
-                  onClick={() => setInfoBox2((prev) => !prev)}
-                  className={`${
-                    !infoBox2 && "-translate-x-[100%]"
-                  } cursor-pointer transition-transform duration-300 ${
-                    hovered2 && "translate-x-0"
-                  } view-info-div-bottom`}
-                > */}
+                      onClick={() => setInfoBox2((prev) => !prev)}
+                      className={`${
+                      !infoBox2 && "-translate-x-[100%]"
+                      } cursor-pointer transition-transform duration-300 ${
+                      hovered2 && "translate-x-0"
+                      } view-info-div-bottom`}
+                      > */}
                       {infoBox2 ? (
                         <MdKeyboardArrowDown size={24} />
                       ) : (
@@ -235,9 +218,9 @@ const ProjectInfo = ({ domainProjects }) => {
                 </div>
 
                 {/* THUMBNAIL CONTENTS */}
-                <div className="w-full  border-2 border-red-400 overflow-hidden rounded-2xl">
+                <div className="thumbnail-img-wrapper">
                   <img
-                    className="thumbnail-img object-cover w-full "
+                    className="thumbnail-img"
                     src={domProjects.project2.thumbnail}
                     alt="Planit-webapp"
                   />
@@ -275,38 +258,30 @@ const ProjectInfo = ({ domainProjects }) => {
             > */}
                   <div className="info-container-bottom flex flex-row">
                     <div className="h-full">
-                      <div className="flex flex-col items-start  p-8 rounded-2xl">
+                      <div className="flex flex-col items-start p-8 rounded-2xl">
                         <div className="flex gap-6 items-center">
-                          <h2 className="text-3xl font-bold">
+                          <h2 className="text-2xl font-bold">
                             {domProjects.project3.title}
                           </h2>
                         </div>
 
-                        <p className="text-gray-400 mt-2 md:text-xl">
+                        <p className="text-gray-400 mt-2 md:text-base">
                           {domProjects.project3.description}
                         </p>
                       </div>
-                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 p-8 rounded-2xl">
+                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 px-8 rounded-2xl">
                         {domProjects.project3.projectIcons.map((proj) => (
-                          <div
+                          <ProjectIcons
                             key={proj.name}
-                            className="flex flex-col w-12 sm:w-14 md:w-18 lg:w-22 items-center gap-2"
-                          >
-                            <div className="used-tech size-12 sm:size-14 md:size-18 lg:size-18 p-2 md:p-4 rounded-full">
-                              <img
-                                className="size-full"
-                                src={proj.image}
-                                alt={proj.image}
-                              />
-                            </div>
-                            <p>{proj.name}</p>
-                          </div>
+                            name={proj.name}
+                            image={proj.image}
+                          />
                         ))}
                       </div>
                     </div>
                     {/* OVERLAY-INFO ON HOVER */}
                     <div
-                      className={`transition-transform duration-300 border-2 opacity-0 view-info-div-bottom`}
+                      className={`transition-transform duration-300 opacity-0 view-info-div-bottom`}
                     >
                       {/* OVERLAY-INFO WITH BUTTON */}
                       {/* <div
@@ -316,7 +291,7 @@ const ProjectInfo = ({ domainProjects }) => {
                   } cursor-pointer transition-transform duration-300 ${
                     hovered3 && "translate-x-0"
                   } view-info-div-bottom`}
-                > */}
+                  > */}
                       {infoBox3 ? (
                         <MdKeyboardArrowDown size={24} />
                       ) : (
@@ -331,9 +306,9 @@ const ProjectInfo = ({ domainProjects }) => {
                 </div>
 
                 {/* THUMBNAIL CONTENTS */}
-                <div className="w-full overflow-hidden border-2 border-green-400 rounded-2xl">
+                <div className="thumbnail-img-wrapper">
                   <img
-                    className="thumbnail-img object-cover w-full"
+                    className="thumbnail-img"
                     src={domProjects.project3.thumbnail}
                     alt="Planit-webapp"
                   />
