@@ -4,7 +4,7 @@ import { ArrowUpIcon } from "@heroicons/react/16/solid";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer pb-10 lg:pb-0">
       <div className="flex-wrap flex-col md:flex-row gap-3 w-full flex justify-between">
         {/* <div className="footer-container border-2"> */}
         <div className="flex items-center justify-center md:justify-baseline min-w-fit">

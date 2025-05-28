@@ -84,7 +84,7 @@ const Workprocess = () => {
         <div className="relative">
           <div
             style={{ left: `${timelineLeft}px` }}
-            className="timeline-wrapper translate-x-[20px] md:translate-x-[30px] lg:translate-x-9 absolute top-2 h-[97%] rounded-full mt-4 w-[2px] z-0 bg-gray-500"
+            className="timeline-wrapper translate-x-[24px] md:translate-x-[30px] lg:translate-x-9 absolute top-2 h-[97%] rounded-full mt-4 w-[2px] z-0 bg-gray-500"
           />
           <div className="relative z-20 xl:space-y-32 space-y-10 pt-5">
             {workProcess.map((process, index) => (
@@ -153,7 +153,7 @@ const Workprocess = () => {
           <div
             ref={timelineWrapperRef}
             style={{ left: `${timelineLeft}px` }}
-            className="timeline-wrapper translate-x-[20px] md:translate-x-[30px] lg:translate-x-10 absolute top-0 h-full z-20"
+            className="timeline-wrapper translate-x-[24px] md:translate-x-[30px] lg:translate-x-10 absolute top-0 h-full z-20"
           >
             <div className="timeline absolute bg-black top-0 left-1/2 w-20 md:w-24 h-full z-30 transform -translate-x-1/2" />
           </div>

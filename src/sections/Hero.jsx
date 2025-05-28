@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative hero-wrapper -pt-8 hero-padding items-start overflow-hidden"
+      className="relative hero-wrapper hero-padding items-start overflow-hidden"
     >
       {/* <section id="home" className="relative overflow-hidden"> */}
       <div className="absolute top-0 left-0 z-10">
@@ -77,16 +77,16 @@ const Hero = () => {
             <div className="flex lg:mt-0 mt-6 py-[3px] items-center md:h-16 h-16 gap-3">
               <Button
                 text="See My Work"
-                className="md:w-80 w-60"
+                className="md:w-80 w-50"
                 // className="md:w-80 w-60 mt-5 lg:mt-auto"
                 id="counter"
               />
-              <SecondaryButton text="Resume" className="bg-black-200" />
+              <SecondaryButton text="Resume" />
             </div>
           </div>
         </header>
       </div>
-      <div className="w-[100vw] lg:w-[50vw] h-[100vh] lg:h-[100vh] top-80 lg:top-0 absolute -right-8 lg:right-0 overflow-hidden flex justify-center items-center mr-8">
+      <div className="w-[100vw] lg:w-[50vw] h-[100vh] lg:h-[100vh] top-80 lg:-top-6 absolute -right-8 lg:right-0 overflow-hidden flex justify-center items-center mr-8">
         <figure className="hero-3d-layout -translate-y-[30%] lg:translate-0">
           {/* <HeroExperience /> */}
           <HeroHead />

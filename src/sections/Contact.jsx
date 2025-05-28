@@ -60,9 +60,9 @@ const Contact = () => {
               <div className="flex flex-col text-lg">
                 <p className=" mt-6 text-gray-400 ">
                   {/* <p className="text-lg max-w-[290px] mt-6 text-gray-400"> */}
-                  I’m a dedicated developer skilled in MERN stack and Next.js,
-                  looking for internships where I can grow, contribute, and
-                  learn from real-world projects..
+                  I’m a dedicated Full-Stack developer skilled in MERN and
+                  Next.js, looking for internships where I can grow, contribute,
+                  and learn from real-world projects.
                   <br /> <br /> When I’m not developing, I sketch app ideas,
                   watch classic movies for fun, and keep an eye on tech trends.
                 </p>
@@ -85,7 +85,7 @@ const Contact = () => {
                 </div>
               </div>
               <button className="w-full mt-6" onClick={handleEmailCopy}>
-                <div className="px-4 py-4 rounded-lg border-2 border-zinc-800 hover:border-zinc-700  bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 flex justify-center items-center relative cursor-pointer overflow-hidden group ">
+                <div className="px-4 py-4 rounded-lg border-2 border-black-200  bg-none hover:bg-black-200 transition-colors duration-200 flex justify-center items-center relative cursor-pointer overflow-hidden group ">
                   {/* <div className="bg-circle" /> */}
                   <p className="text uppercase">
                     {copied ? "Email Copied!" : "Copy Email"}
@@ -111,7 +111,7 @@ const Contact = () => {
                 <div>
                   <label htmlFor="email">Your Email</label>
                   <input
-                    className="placeholder-zinc-600 bg-zinc-900"
+                    className="placeholder-zinc-600 text-base bg-zinc-900"
                     type="email"
                     id="email"
                     name="email"
@@ -125,7 +125,7 @@ const Contact = () => {
                 <div>
                   <label htmlFor="message">Your Message</label>
                   <textarea
-                    className="placeholder-zinc-600 bg-zinc-900"
+                    className="placeholder-zinc-600 text-base bg-zinc-900"
                     id="message"
                     name="message"
                     value={form.message}
