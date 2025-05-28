@@ -61,7 +61,7 @@ section {
   }
 
   .hero-padding {
-    @apply -mb-10 lg:-mb-10 pt-16 lg:pt-0;
+    @apply -mb-4 lg:-mb-10 pt-16 lg:pt-0;
   }
 
   .header-margin {
@@ -105,7 +105,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative xl:z-10  md:h-dvh h-fit flex xl:mt-4 xl:items-center items-start justify-center;
+    @apply relative z-10  md:h-dvh h-fit flex xl:mt-4 xl:items-center items-start justify-center;
     /* @apply relative xl:z-10  md:h-dvh h-[75vh] flex xl:mt-8 xl:items-center items-start justify-center; */
     /* @apply relative xl:z-10 xl:mt-20 mt-32 md:h-dvh h-[75vh] flex xl:items-center items-start justify-center; */
   }
@@ -142,7 +142,7 @@ section {
       @apply w-full;
 
       .image-wrapper {
-        @apply rounded-2xl w-full h-[324px] md:h-[350px] lg:h-[500px] flex flex-col gap-6 bg-[#141414];
+        @apply rounded-2xl w-full h-[330px] md:h-[350px] lg:h-[500px] flex flex-col gap-6 bg-[#141414];
 
         .top-text-content {
           /* @apply w-full h-fit rounded-2xl p-0 gap-6 flex justify-between; popup from bottom */
@@ -168,7 +168,7 @@ section {
         /* @apply flex-auto min-w-[500px] lg:max-w-full; */
 
         .image-wrapper-bottom {
-          @apply rounded-2xl w-full h-[324px] md:h-[350px] lg:h-[350px] flex flex-col gap-6 bg-[#141414];
+          @apply rounded-2xl w-full h-[330px] md:h-[350px] lg:h-[350px] flex flex-col gap-6 bg-[#141414];
 
           .top-text-content-bottom {
             /* @apply w-full h-fit rounded-2xl p-0 gap-6 flex justify-between; popup from bottom */
@@ -213,17 +213,17 @@ section {
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[150%] h-[150%] group-hover:size-10 group-hover:right-10
+        w-[150%] h-[150%] group-hover:size-10 group-hover:right-16
         rounded-full bg-white-50 transition-all duration-500;
     }
 
     .text {
-      @apply uppercase md:text-base text-black transition-all duration-500
+      @apply text-base text-black transition-all duration-500
         group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-6 md:right-10  top-1/2 
+      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-6 md:right-16  top-1/2 
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
@@ -290,10 +290,10 @@ section {
     }
 
     .socials {
-      @apply flex items-center justify-center gap-2;
+      @apply flex items-center justify-center gap-3 md:gap-2;
 
       .icon {
-        @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-lg size-9 md:size-9 cursor-pointer transition-all duration-500 hover:bg-black-50;
+        @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-lg size-10 md:size-9 cursor-pointer transition-all duration-500 hover:bg-black-50;
       }
 
       img {

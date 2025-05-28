@@ -54,7 +54,7 @@ const Contact = () => {
         <div className="grid-12-cols">
           <div className="xl:col-span-6 ">
             <div className="flex-left card-border rounded-xl p-6 md:p-10">
-              <h1 className="font-semibold mt-2 lg:mt-0 text-3xl">
+              <h1 className="font-semibold mt-2 lg:mt-0 text-2xl md:text-3xl">
                 More about me
               </h1>
               <div className="flex flex-col text-lg">
@@ -87,7 +87,7 @@ const Contact = () => {
               <button className="w-full mt-6" onClick={handleEmailCopy}>
                 <div className="px-4 py-4 rounded-lg border-2 border-black-200  bg-none hover:bg-black-200 transition-colors duration-200 flex justify-center items-center relative cursor-pointer overflow-hidden group ">
                   {/* <div className="bg-circle" /> */}
-                  <p className="text uppercase">
+                  <p className="text">
                     {copied ? "Email Copied!" : "Copy Email"}
                   </p>
                   {/* <div className="arrow-wrapper">

@@ -7,6 +7,8 @@ const words = [
   { text: "UI/UX Flow", imgPath: "/images/concepts.svg" },
 ];
 
+const heroWords = ["Web Apps", "Interfaces", "Platforms", "Web Apps"];
+
 const counterItems = [
   // { label: "Mobile App Projects", tool: "React Native", domain: "mobile" },
   { label: "Development", tool: "MERN & Next.js", domain: "web" },
@@ -453,6 +455,7 @@ const designProjects = [
 
 export {
   words,
+  heroWords,
   counterItems,
   socialImgs,
   skillListTop,

@@ -4,7 +4,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 const SecondaryButton = ({ text, className }) => {
   return (
     <div
-      className={`${className} border-2 border-black-200  w-fit overflow-hidden group uppercase flex items-center rounded-lg h-[103%] md:h-full`}
+      className={`${className} group border-2 border-black-200 w-fit overflow-hidden group text-base flex items-center rounded-lg h-[103%] md:h-full`}
     >
       <a
         href="/Rajan-Khadka-Resume.pdf"
@@ -15,7 +15,7 @@ const SecondaryButton = ({ text, className }) => {
       >
         {text}
       </a>
-      <span className="w-1 h-[44%] bg-white/60"></span>
+      <span className="w-1 h-[44%] bg-white/60 group-hover:bg-black"></span>
       <a
         href="/Rajan-Khadka-Resume.pdf"
         download="Rajan-Khadka-Resume.pdf"

@@ -58,7 +58,7 @@ const Projects = () => {
               } border-[1.5px] bg-zinc-900 p-10 flex flex-col justify-center rounded-2xl`}
             >
               <div className="text-white-50 text-lg mb-4">Let's see</div>
-              <div className="counter-number text-white text-4xl font-bold mb-2">
+              <div className="counter-number text-white text-3xl lg:text-4xl font-bold mb-2">
                 {item.label}
               </div>
             </div>

@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { heroWords } from "../constants/index.js";
+
 const HeroTexts = () => {
   const childRef1 = useRef();
   const childRef2 = useRef();
@@ -57,6 +59,9 @@ const HeroTexts = () => {
     }
   }, []);
 
+  const smWidth = 200;
+  const lgWidth = 400;
+
   //   gsap.to(childRef.current, {
   //     x: parentWidth/2 +
   //   })
@@ -64,55 +69,46 @@ const HeroTexts = () => {
   return (
     <div
       ref={parentRef}
-      className="w-[200px] lg:w-[400px]  box-border ml-10 h-[60px] relative overflow-hidden"
+      className={`w-[${smWidth}px] lg:w-[${lgWidth}px]  box-border ml-10 h-[60px] relative overflow-hidden`}
     >
       <div
         ref={childRef1}
-        className={`md:text-[60px] h-full text-[36px] font-semibold z-20 pointer-events-none flex bg-black -translate-y-[50%] text-white overflow-hidden absolute gap-0 top-0 left-0 `}
+        className={`md:text-[60px] h-full text-[38px] font-semibold z-20 pointer-events-none flex bg-black -translate-y-[50%] text-white overflow-hidden absolute gap-0 top-0 left-0 `}
       >
         <div className="flex translate-y-[50%]">
           {/* <h1
             ref={textRef}
-            className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center"
+            className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}
           >
             Mobile Apps
           </h1> */}
-          <h1
-            ref={textRef}
-            className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center"
-          >
-            Web Apps
-          </h1>
-          <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-            Products
-          </h1>
-          <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-            Interfaces
-          </h1>
-          <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-            Web Apps
-          </h1>
+
+          {heroWords.map((word, index) => (
+            <h1
+              key={index}
+              ref={index === 0 ? textRef : null}
+              className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}
+            >
+              {word}
+            </h1>
+          ))}
         </div>
       </div>
       <div
         ref={childRef2}
-        className={`md:text-[60px] h-full text-[36px] font-semibold z-10 pointer-events-none flex text-white absolute gap-0 right-0 bottom-0 overflow-hidden`}
+        className={`md:text-[60px] h-full text-[38px] font-semibold z-10 pointer-events-none flex text-white absolute gap-0 right-0 bottom-0 overflow-hidden`}
       >
-        {/* <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
+        {/* <h1 className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}>
           Mobile Apps
         </h1> */}
-        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-          Web Apps
-        </h1>
-        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-          Interfaces
-        </h1>
-        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-          Products
-        </h1>
-        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-          Web Apps
-        </h1>
+        {[...heroWords].reverse().map((word, index) => (
+          <h1
+            key={index}
+            className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}
+          >
+            {word}
+          </h1>
+        ))}
       </div>
     </div>
   );
