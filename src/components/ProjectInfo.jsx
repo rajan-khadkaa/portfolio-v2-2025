@@ -22,30 +22,30 @@ const ProjectInfo = ({ domainProjects }) => {
   const project3Ref = useRef(null);
 
   useGSAP(() => {
-    // const projCards = [
-    //   project1Ref.current,
-    //   project2Ref.current,
-    //   project3Ref.current,
-    // ];
-    // projCards.forEach((card, index) => {
-    //   gsap.fromTo(
-    //     card,
-    //     {
-    //       y: 50,
-    //       opacity: 0,
-    //     },
-    //     {
-    //       y: 0,
-    //       opacity: 1,
-    //       duration: 1,
-    //       delay: 0.3 * (index + 1),
-    //       scrollTrigger: {
-    //         trigger: card,
-    //         start: "top bottom-=100",
-    //       },
-    //     }
-    //   );
-    // });
+    const projCards = [
+      project1Ref.current,
+      project2Ref.current,
+      project3Ref.current,
+    ];
+    projCards.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          // delay: 0.3 * (index + 1),
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom-=100",
+          },
+        }
+      );
+    });
   }, []);
 
   return (
@@ -142,7 +142,7 @@ const ProjectInfo = ({ domainProjects }) => {
               <BentoLink
                 gitlink={domProjects.glink}
                 github={domProjects.project1.link.githubLink}
-                demo={domProjects.project1.link.projLink}
+                demo={domProjects.project1.link.demoLink}
                 hover={hovered1}
               />
             </div>
@@ -229,7 +229,7 @@ const ProjectInfo = ({ domainProjects }) => {
                 <BentoLink
                   gitlink={domProjects.glink}
                   github={domProjects.project2.link.githubLink}
-                  demo={domProjects.project2.link.projLink}
+                  demo={domProjects.project2.link.demoLink}
                   hover={hovered2}
                 />
               </div>
@@ -317,7 +317,7 @@ const ProjectInfo = ({ domainProjects }) => {
                 <BentoLink
                   gitlink={domProjects.glink}
                   github={domProjects.project3.link.githubLink}
-                  demo={domProjects.project3.link.projLink}
+                  demo={domProjects.project3.link.demoLink}
                   hover={hovered3}
                 />
               </div>

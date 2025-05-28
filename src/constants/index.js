@@ -78,7 +78,7 @@ export const workProcess = [
       {
         path: "/images/tech-logo/original/nodejs.svg",
         name: "Node.js",
-        color: "#61DAFB",
+        color: "#339933",
       },
       {
         path: "/images/tech-logo/original/mongodb.svg",
@@ -135,22 +135,22 @@ const socialImgs = [
   {
     name: "Github",
     imgPath: "/images/media-logo/rounded/github.svg",
-    url: "https://www.facebook.com",
+    url: "https://github.com/rajan-khadkaa",
   },
   {
     name: "linkedin",
     imgPath: "/images/media-logo/rounded/linkedin.svg",
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/rajan-khadka-106868268/",
   },
   {
     name: "Whatsapp",
     imgPath: "/images/media-logo/rounded/whatsapp.svg",
-    url: "https://www.whatsapp.com",
+    url: "https://wa.me/+9779814364007?text=Hello%20Rajan,%20Let%27s%20work%20together.",
   },
   {
     name: "Telegram",
     imgPath: "/images/media-logo/rounded/telegram.svg",
-    url: "https://www.telegram.com",
+    url: "https://t.me/rajankhadkaa?text=Hello%20Rajan,%20Let%27s%20work%20together.",
   },
 ];
 
@@ -186,7 +186,7 @@ const webProjects = [
     project1: {
       title: "Plan-it",
       description:
-        "Plan-It is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "Plan-It is a productivity app to capture ideas, set future goals, and track personal progress. Revisit your saved goals and check off what you’ve accomplished over time.",
       projectIcons: [
         {
           name: "React",
@@ -216,14 +216,14 @@ const webProjects = [
       thumbnail: "/images/bg-thumbnails/planit.png",
       link: {
         githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://plan-it-mern-app.vercel.app/",
       },
     },
 
     project2: {
       title: "Spendly",
       description:
-        "Spendly is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "Spendly is a simple financial tracker to manage income and expenses with category filters. Easily review your transactions, and recover deleted records from the bin.",
       projectIcons: [
         {
           name: "React",
@@ -248,15 +248,15 @@ const webProjects = [
       ],
       thumbnail: "/images/bg-thumbnails/spendly.png",
       link: {
-        githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+        githubLink: "https://github.com/rajan-khadkaa/income-expense-tracker",
+        demoLink: "https://income-expense-mern-app.vercel.app/",
       },
     },
 
     project3: {
       title: "AuthNext",
       description:
-        "AuthNext is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "AuthNext is a secure login system built with JWT and MongoDB. It manages user sessions and restricts access to public or private routes based on login status.",
       projectIcons: [
         {
           name: "Next.js",
@@ -269,8 +269,9 @@ const webProjects = [
       ],
       thumbnail: "/images/bg-thumbnails/authnext.png",
       link: {
-        githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+        githubLink:
+          "https://github.com/rajan-khadkaa/nextjs-authentication-fullstack",
+        demoLink: "https://nextjs-authentication-fullstack.vercel.app/login",
       },
     },
   },
@@ -281,7 +282,7 @@ const mobProjects = [
     project1: {
       title: "Paydrift",
       description:
-        "Paydrift is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "Paydrift is a bill-splitting app for group trips and hangouts. It calculates individual dues, displays payment statuses, and makes expense sharing effortless.",
       projectIcons: [
         {
           name: "React Native",
@@ -311,14 +312,14 @@ const mobProjects = [
       thumbnail: "/images/thumbnails/paydrift.png",
       link: {
         githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        githubLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink: "https://github.com/rajan-khadkaa/plan-it",
       },
     },
 
     project2: {
       title: "Medsync",
       description:
-        "Medsync is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "Medsync is a medication reminder app that tracks daily dosages. Users set their schedules and check off doses to stay on top of their health routine.",
       projectIcons: [
         {
           name: "React Native",
@@ -351,7 +352,7 @@ const mobProjects = [
     project3: {
       title: "Genflick",
       description:
-        "Genflick is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "Genflick is an AI-powered app that turns user prompts into creative short videos. Enter an idea and watch it become a visual story instantly.",
       projectIcons: [
         {
           name: "React Native",
@@ -376,7 +377,7 @@ const designProjects = [
     project1: {
       title: "SafeTrack",
       description:
-        "SafeTrack is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "SafeTrack is a parenting app designed to monitor children's locations, school routines, and important events. It helps parents stay informed and organized every day.",
       projectIcons: [
         {
           name: "Figma",
@@ -393,15 +394,15 @@ const designProjects = [
       ],
       thumbnail: "/images/bg-thumbnails/safetrack.png",
       link: {
-        githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink:
+          "https://rajankhadka.notion.site/SafeTrack-Child-Monitoring-App-2221fb7474b14dc4854f7a0840207f35",
       },
     },
 
     project2: {
       title: "HRMS",
       description:
-        "HRMS is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "HRMS is an HR management system designed to streamline hiring, employee tracking, and payroll. It focuses on intuitive UX and practical design problem-solving.",
       projectIcons: [
         {
           name: "Figma",
@@ -418,15 +419,15 @@ const designProjects = [
       ],
       thumbnail: "/images/bg-thumbnails/hrms.png",
       link: {
-        githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink:
+          "https://rajankhadka.notion.site/HRMS-Human-Resource-Management-79e46b9f123248069996c822633b6893",
       },
     },
 
     project3: {
       title: "Donate Red",
       description:
-        "Donate Red is a productivity app to save ideas, set goals, and track personal growth. Save your ideas and visit later to view and track. Plan-It is a productivity app to save ideas, set goals, and track personal growth.",
+        "DonateRed is a blood donation platform connecting donors with verified organizations. It serves as a bridge to make donation simple, secure, and accessible.",
       projectIcons: [
         {
           name: "Figma",
@@ -443,8 +444,8 @@ const designProjects = [
       ],
       thumbnail: "/images/bg-thumbnails/donatered.png",
       link: {
-        githubLink: "https://github.com/rajan-khadkaa/plan-it",
-        demoLink: "https://github.com/rajan-khadkaa/plan-it",
+        demoLink:
+          "https://rajankhadka.notion.site/DonateRed-Blood-Donation-6caf81b95a9e4c6a8b926a64837433a1",
       },
     },
   },

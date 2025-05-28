@@ -71,20 +71,26 @@ const HeroTexts = () => {
         className={`md:text-[60px] h-full text-[30px] font-semibold z-20 pointer-events-none flex bg-black -translate-y-[50%] text-white overflow-hidden absolute gap-0 top-0 left-0 `}
       >
         <div className="flex translate-y-[50%]">
-          <h1
+          {/* <h1
             ref={textRef}
             className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center"
           >
             Mobile Apps
+          </h1> */}
+          <h1
+            ref={textRef}
+            className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center"
+          >
+            Web Apps
           </h1>
           <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-            Web Apps
+            Products
           </h1>
           <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
             Interfaces
           </h1>
           <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-            Mobile Apps
+            Web Apps
           </h1>
         </div>
       </div>
@@ -92,18 +98,20 @@ const HeroTexts = () => {
         ref={childRef2}
         className={`md:text-[60px] h-full text-[30px] font-semibold z-10 pointer-events-none flex text-white absolute gap-0 right-0 bottom-0 overflow-hidden`}
       >
-        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
+        {/* <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
           Mobile Apps
+        </h1> */}
+        <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
+          Web Apps
         </h1>
         <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
           Interfaces
         </h1>
         <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-          Web Apps
+          Products
         </h1>
-
         <h1 className="flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center">
-          Mobile Apps
+          Web Apps
         </h1>
       </div>
     </div>

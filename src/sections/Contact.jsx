@@ -48,10 +48,10 @@ const Contact = () => {
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full">
         <TitleHeader
-          title="Get in Touch – Let’s Connect"
+          title="Let’s Connect"
           sub="Have questions or ideas? Let’s talk!"
         />
-        <div className="grid-12-cols mt-16">
+        <div className="grid-12-cols">
           <div className="xl:col-span-6 ">
             <div className="flex-left card-border rounded-xl p-6 md:p-10">
               <h1 className="font-semibold mt-2 lg:mt-0 text-3xl">

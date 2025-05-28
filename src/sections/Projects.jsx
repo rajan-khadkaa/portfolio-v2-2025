@@ -34,7 +34,7 @@ const Projects = () => {
       id="projects"
       className="app-showcase section-padding"
     >
-      <div className="mx-auto grid-3-cols mb-10 lg:mb-20 w-full">
+      <div className="mx-auto grid-3-cols header-margin-proj w-full">
         {counterItems.map((item) => (
           <Tilt
             key={item.label}

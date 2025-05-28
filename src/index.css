@@ -9,6 +9,7 @@ html {
   font-size: clamp(14px, 2.5vw, 15px);
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 body {
   font-size: 1rem;
@@ -55,7 +56,18 @@ section {
   }
 
   .section-padding {
-    @apply px-5 lg:px-20 md:mt-40 mt-20;
+    @apply px-5 pt-6 lg:px-20 md:mt-22 mt-12;
+  }
+
+  .hero-padding {
+    @apply lg:-mb-8;
+  }
+
+  .header-margin {
+    @apply mb-10 md:mb-16 lg:mb-20;
+  }
+  .header-margin-proj {
+    @apply mb-10 md:mb-14 lg:mb-16;
   }
 
   .mt-responsive {
@@ -129,11 +141,11 @@ section {
       @apply w-full;
 
       .image-wrapper {
-        @apply w-full h-[350px] md:h-[350px] lg:h-[500px] flex flex-col gap-6;
+        @apply rounded-2xl w-full h-[324px] md:h-[350px] lg:h-[500px] flex flex-col gap-6 bg-[#141414];
 
         .top-text-content {
           /* @apply w-full h-fit rounded-2xl p-0 gap-6 flex justify-between; popup from bottom */
-          @apply rounded-2xl  gap-6 flex flex-col absolute w-full lg:w-[460px] h-full bottom-0 z-10 transition-all duration-400;
+          @apply rounded-2xl  gap-6 flex flex-col absolute w-full lg:w-[420px] h-full bottom-0 z-10 transition-all duration-400;
           /* @apply w-full h-fit rounded-2xl py-8 px-12 gap-6 flex justify-between; */
 
           .info-container {
@@ -151,11 +163,11 @@ section {
       @apply flex lg:flex-row flex-col gap-6 w-full;
 
       .project {
-        /* @apply flex-auto border-2 border-green-500 md:min-w-[300px] md:max-w-[500px]; */
+        /* @apply border-2 border-green-500; */
         /* @apply flex-auto min-w-[500px] lg:max-w-full; */
 
         .image-wrapper-bottom {
-          @apply w-full h-[350px] md:h-[350px] lg:h-[350px] flex flex-col gap-6;
+          @apply rounded-2xl w-full h-[324px] md:h-[350px] lg:h-[350px] flex flex-col gap-6 bg-[#141414];
 
           .top-text-content-bottom {
             /* @apply w-full h-fit rounded-2xl p-0 gap-6 flex justify-between; popup from bottom */

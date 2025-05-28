@@ -81,7 +81,7 @@ const Workprocess = () => {
       <div className="w-full h-full">
         {/* <div className="w-full h-full md:px-20 px-5"> */}
         <TitleHeader title="How I work" sub="Work Process" />
-        <div className="mt-32 relative">
+        <div className="relative">
           <div
             style={{ left: `${timelineLeft}px` }}
             className="timeline-wrapper translate-x-[20px] md:translate-x-[30px] lg:translate-x-9 absolute top-2 h-[97%] rounded-full mt-4 w-[2px] z-0 bg-gray-500"
@@ -132,7 +132,7 @@ const Workprocess = () => {
                         </p>
                       </div>
                       <div className="desc-card">
-                        <h1 className="font-semibold text-3xl">
+                        <h1 className="font-semibold text-2xl lg:text-3xl">
                           {process.title}
                         </h1>
                         <ul className="list-disc ms-5 mt-5 flex flex-col gap-5">

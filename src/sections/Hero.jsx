@@ -6,11 +6,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import HeroHead from "../components/HeroModels/HeroHead.jsx";
 import HeroTexts from "../components/HeroTexts.jsx";
+import SecondaryButton from "../components/SecondaryButton.jsx";
 
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
-      ".hero-text h1",
+      // ".hero-text",
+      ".text-slide",
       {
         y: 50,
         opacity: 0,
@@ -19,7 +21,8 @@ const Hero = () => {
         y: 0,
         opacity: 1,
         stagger: 0.3,
-        duration: 2,
+        duration: 3,
+        // ease: "none",
         ease: "power2.inOut",
       }
     );
@@ -28,7 +31,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative hero-wrapper -pt-8 items-start overflow-hidden"
+      className="relative hero-wrapper -pt-8 hero-padding items-start overflow-hidden"
     >
       {/* <section id="home" className="relative overflow-hidden"> */}
       <div className="absolute top-0 left-0 z-10">
@@ -40,9 +43,9 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-fit w-screen md:px-20 px-5">
           <div className="flex flex-col gap-2 lg:gap-7">
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Rajan. I am a Web App Developer
+              Hi, I’m Rajan. I am a Full-Stack Developer
             </p>
-            <div className="hero-text ">
+            <div className="hero-text">
               <div className="flex flex-row flex-wrap items-center">
                 <h1 className="mr-5">I build</h1>
                 <div className="flex flex-row -ml-10 items-center">
@@ -66,16 +69,20 @@ const Hero = () => {
                   </span>
                 </span> */}
               </div>
-              <h1 className="my-1 lg:my-auto">that solve</h1>
-              <h1>real problems.</h1>
+              <h1 className="text-slide my-1 lg:my-auto">that solve</h1>
+              <h1 className="text-slide">real problems.</h1>
               {/* <h1>that Deliver Results</h1> */}
             </div>
 
-            <Button
-              text="See My Work"
-              className="md:w-80 md:h-16 w-60 h-12 mt-5 lg:mt-auto"
-              id="counter"
-            />
+            <div className="flex lg:mt-0 mt-6 py-[3px] items-center md:h-16 h-16 gap-3">
+              <Button
+                text="See My Work"
+                className="md:w-80 w-60"
+                // className="md:w-80 w-60 mt-5 lg:mt-auto"
+                id="counter"
+              />
+              <SecondaryButton text="Resume" className="bg-black-200" />
+            </div>
           </div>
         </header>
       </div>

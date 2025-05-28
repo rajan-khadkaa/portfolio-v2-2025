@@ -1,11 +1,11 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment } from "@react-three/drei";
+import { OrbitControls, Environment, Preload } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 // import { Head } from "./Head.jsx";
 import { HeadOpt } from "./HeadOpt.jsx";
-import HeroHeadLight from "./HeroHeadLight.jsx";
+// import HeroHeadLight from "./HeroHeadLight.jsx";
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 
 const HeroHead = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -22,7 +22,8 @@ const HeroHead = () => {
   // }, []);
 
   return (
-    <Canvas camera={{ position: [8, 0, 8], fov: 20 }}>
+    <Canvas frameloop="demand" camera={{ position: [8, 0, 8], fov: 20 }}>
+      <Preload all />
       {/* Lighting */}
       {/* <Environment preset="forest" /> */}
       <Environment preset="warehouse" background={false} intensity={0.01} />

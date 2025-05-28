@@ -44,7 +44,7 @@ const Skills = () => {
         <TitleHeader title="My skills & Tech Stacks" sub="Tech Stack" />
         <div
           ref={containerRef}
-          className="mt-32 relative skillsContainer w-full min-h-[400px] flex justify-center items-center"
+          className="relative skillsContainer w-full min-h-[400px] flex justify-center items-center"
         >
           <div className="skill-grid relative mx-0 my-auto h-full w-full flex flex-col border-[1px] border-gray-800">
             {/* Top Row: 3 cards */}
