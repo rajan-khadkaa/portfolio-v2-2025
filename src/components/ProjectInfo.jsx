@@ -57,7 +57,7 @@ const ProjectInfo = ({ domainProjects }) => {
             <div
               onMouseEnter={() => setHovered1(true)}
               onMouseLeave={() => setHovered1(false)}
-              className="image-wrapper info-hover-box overflow-hidden group relative"
+              className="image-wrapper info-hover-box group relative"
             >
               {/* OVERLAY-INFO ON HOVER */}
               <div
@@ -72,8 +72,8 @@ const ProjectInfo = ({ domainProjects }) => {
                   }`}
                   > */}
                 <div className="info-container">
-                  <div className="h-full py-6 px-6 lg:py-8 lg:px-8">
-                    <div className="flex flex-col px-0 pb-5 pt-2 lg:pb-8 lg:px-2 lg:pt-0 items-start rounded-2xl">
+                  <div className="h-full p-6 lg:p-8">
+                    <div className="flex flex-col px-0 pb-5 pt-2 lg:pb-8 lg:px-2 lg:pt-0 items-start">
                       {/* <div className="flex flex-col mb-4 lg:mb-8 items-start rounded-2xl"> */}
                       <div className="flex gap-6 items-center">
                         <h2 className="text-2xl font-bold">
@@ -93,7 +93,7 @@ const ProjectInfo = ({ domainProjects }) => {
                         {domProjects.project1.description}
                       </p>
                     </div>
-                    <div className="flex h-fit flex-wrap w-full flex-row gap-6 sm:px-8 lg:px-2 rounded-2xl">
+                    <div className="flex h-[50%] overflow-auto scrollbar-thin flex-wrap w-full flex-row gap-x-6 gap-y-4 lg:px-2">
                       {domProjects.project1.projectIcons.map((proj) => (
                         <ProjectIcons
                           key={proj.name}
@@ -154,7 +154,7 @@ const ProjectInfo = ({ domainProjects }) => {
               <div
                 onMouseEnter={() => setHovered2(true)}
                 onMouseLeave={() => setHovered2(false)}
-                className="image-wrapper-bottom overflow-hidden relative group"
+                className="image-wrapper-bottom relative group"
               >
                 {/* OVERLAY-INFO ON HOVER */}
                 <div
@@ -169,8 +169,8 @@ const ProjectInfo = ({ domainProjects }) => {
                   }`}
                   > */}
                   <div className="info-container-bottom flex flex-row">
-                    <div className="h-full">
-                      <div className="flex flex-col items-start  p-8 rounded-2xl">
+                    <div className="h-full p-6">
+                      <div className="flex flex-col items-start px-0 pb-5 pt-2">
                         <div className="flex gap-6 items-center">
                           <h2 className="text-2xl font-bold">
                             {domProjects.project2.title}
@@ -181,7 +181,7 @@ const ProjectInfo = ({ domainProjects }) => {
                           {domProjects.project2.description}
                         </p>
                       </div>
-                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 px-8 rounded-2xl">
+                      <div className="flex h-[50%] overflow-auto scrollbar-thin flex-wrap w-full flex-row gap-x-6 gap-y-4">
                         {domProjects.project2.projectIcons.map((proj) => (
                           <ProjectIcons
                             key={proj.name}
@@ -257,8 +257,8 @@ const ProjectInfo = ({ domainProjects }) => {
               }`}
             > */}
                   <div className="info-container-bottom flex flex-row">
-                    <div className="h-full">
-                      <div className="flex flex-col items-start p-8 rounded-2xl">
+                    <div className="h-full p-6">
+                      <div className="flex flex-col items-start px-0 pb-5 pt-2">
                         <div className="flex gap-6 items-center">
                           <h2 className="text-2xl font-bold">
                             {domProjects.project3.title}
@@ -269,7 +269,7 @@ const ProjectInfo = ({ domainProjects }) => {
                           {domProjects.project3.description}
                         </p>
                       </div>
-                      <div className="flex h-fit flex-wrap w-full flex-row gap-6 px-8 rounded-2xl">
+                      <div className="flex h-[50%] overflow-auto scrollbar-thin flex-wrap w-full flex-row gap-x-6 gap-y-4">
                         {domProjects.project3.projectIcons.map((proj) => (
                           <ProjectIcons
                             key={proj.name}

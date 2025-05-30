@@ -10,6 +10,7 @@ import SecondaryButton from "../components/SecondaryButton.jsx";
 
 const Hero = () => {
   useGSAP(() => {
+    console.log("Viewport width:", window.innerWidth);
     gsap.fromTo(
       // ".hero-text",
       ".text-slide",
@@ -29,18 +30,15 @@ const Hero = () => {
   });
 
   return (
-    <section
-      id="home"
-      className="relative hero-wrapper hero-padding items-start overflow-hidden"
-    >
+    <section id="home" className="hero-wrapper hero-padding">
       {/* <section id="home" className="relative overflow-hidden"> */}
       <div className="absolute top-0 left-0 z-10">
         {/* <img src="/images/bg.png" alt="" /> */}
       </div>
 
-      <div className="hero-layout md:w-fit">
+      <div className="hero-text-wrapper">
         {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-fit w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-center md:w-fit w-screen md:px-14 lg:pl-20 px-5">
           <div className="flex flex-col gap-2 lg:gap-7">
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
               Hi, I’m Rajan. I am a Full-Stack Developer
@@ -86,11 +84,11 @@ const Hero = () => {
           </div>
         </header>
       </div>
-      <div className="w-[100vw] lg:w-[50vw] h-[100vh] lg:h-[100vh] top-80 lg:-top-6 absolute -right-8 lg:right-0 overflow-hidden flex justify-center items-center mr-8">
-        <figure className="hero-3d-layout -translate-y-[30%] lg:translate-0">
+      <div className="hero-3d-wrapper">
+        <div className="model-3d">
           {/* <HeroExperience /> */}
           <HeroHead />
-        </figure>
+        </div>
       </div>
     </section>
   );

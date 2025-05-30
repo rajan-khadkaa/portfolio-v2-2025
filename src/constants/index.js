@@ -207,12 +207,12 @@ const webProjects = [
           image: "/images/tech-logo/original/mongodb.svg",
         },
         {
-          name: "Cloudinary",
-          image: "/images/tech-logo/original/cloudinary.svg",
-        },
-        {
           name: "Firebase",
           image: "/images/tech-logo/original/firebase.svg",
+        },
+        {
+          name: "Cloudinary",
+          image: "/images/tech-logo/original/cloudinary.svg",
         },
       ],
       thumbnail: "/images/bg-thumbnails/planit.png",

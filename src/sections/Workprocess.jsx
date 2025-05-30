@@ -93,7 +93,7 @@ const Workprocess = () => {
                 className="exp-card-wrapper flex flex-col-reverse xl:flex-row xl:gap-5 gap-10 justify-between"
               >
                 <div className="xl:w-2/6 flex justify-baseline items-start w-full -mt-4">
-                  <div className="timeline-card flex flex-row justify-end w-fit gap-12  ml-16 md:ml-18 lg:ml-0 md:mb-0 mb-14">
+                  <div className="timeline-card flex flex-row justify-end w-fit gap-12  ml-16 md:ml-26 lg:ml-0 md:mb-0 mb-14">
                     {process.techLogo.map((img) => (
                       <div
                         className="flex flex-col gap-2 justify-center items-center"

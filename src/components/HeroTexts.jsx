@@ -69,16 +69,16 @@ const HeroTexts = () => {
   return (
     <div
       ref={parentRef}
-      className={`w-[${smWidth}px] lg:w-[${lgWidth}px]  box-border ml-10 h-[60px] relative overflow-hidden`}
+      className={`w-[200px] md:w-[300px] lg:w-[400px]  box-border ml-10 h-[60px] relative overflow-hidden`}
     >
       <div
         ref={childRef1}
-        className={`md:text-[60px] h-full text-[38px] font-semibold z-20 pointer-events-none flex bg-black -translate-y-[50%] text-white overflow-hidden absolute gap-0 top-0 left-0 `}
+        className={`h-full text-[36px] md:text-[48px] lg:text-[60px]  font-semibold z-20 pointer-events-none flex bg-black -translate-y-[50%] text-white overflow-hidden absolute gap-0 top-0 left-0 `}
       >
         <div className="flex translate-y-[50%]">
           {/* <h1
             ref={textRef}
-            className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}
+            className={`flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center`}
           >
             Mobile Apps
           </h1> */}
@@ -87,7 +87,7 @@ const HeroTexts = () => {
             <h1
               key={index}
               ref={index === 0 ? textRef : null}
-              className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}
+              className={`flex flex-auto w-[200px] md:w-[300px] lg:w-[400px] justify-baseline items-center`}
             >
               {word}
             </h1>
@@ -96,15 +96,15 @@ const HeroTexts = () => {
       </div>
       <div
         ref={childRef2}
-        className={`md:text-[60px] h-full text-[38px] font-semibold z-10 pointer-events-none flex text-white absolute gap-0 right-0 bottom-0 overflow-hidden`}
+        className={`h-full text-[36px] md:text-[48px] lg:text-[60px] font-semibold z-10 pointer-events-none flex text-white absolute gap-0 right-0 bottom-0 overflow-hidden`}
       >
-        {/* <h1 className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}>
+        {/* <h1 className={`flex flex-auto w-[200px] lg:w-[400px] justify-baseline items-center`}>
           Mobile Apps
         </h1> */}
         {[...heroWords].reverse().map((word, index) => (
           <h1
             key={index}
-            className={`flex flex-auto w-[${smWidth}px] lg:w-[${lgWidth}px] justify-baseline items-center`}
+            className={`flex flex-auto w-[200px] md:w-[300px] lg:w-[400px] justify-baseline items-center`}
           >
             {word}
           </h1>
