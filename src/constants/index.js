@@ -53,7 +53,7 @@ export const workProcess = [
     techLogo: [
       {
         path: "/images/tech-logo/original/react.svg",
-        name: "React Native",
+        name: "React",
         color: "#61DAFB",
       },
       {
@@ -201,18 +201,33 @@ const skillListLight = [
   { name: "Docker (Basics)", path: "/images/tech-logo/dark/docker.svg" },
   { name: "Figma", path: "/images/tech-logo/dark/figma.svg" },
 ];
+// const skillListOriginal = [
+//   { name: "React Native", path: "/images/tech-logo/original/react.svg" },
+//   { name: "Node.js", path: "/images/tech-logo/original/nodejs.svg" },
+//   { name: "Next.js", path: "/images/tech-logo/original/nextjs-modified.svg" },
+//   { name: "TypeScript", path: "/images/tech-logo/original/typescript.svg" },
+//   { name: "PostgreSQL", path: "/images/tech-logo/original/postgres.svg" },
+//   { name: "MongoDB", path: "/images/tech-logo/original/mongodb.svg" },
+//   { name: "Tailwind CSS", path: "/images/tech-logo/original/tailwind.svg" },
+//   { name: "GSAP", path: "/images/tech-logo/original/gsap.svg" },
+//   { name: "Three.js", path: "/images/tech-logo/original/threejs-modified.svg" },
+//   { name: "Git", path: "/images/tech-logo/original/git.svg" },
+//   { name: "Docker (Basics)", path: "/images/tech-logo/original/docker.svg" },
+//   { name: "Figma", path: "/images/tech-logo/original/figma.svg" },
+// ];
+
 const skillListOriginal = [
-  { name: "React Native", path: "/images/tech-logo/original/react.svg" },
-  { name: "Node.js", path: "/images/tech-logo/original/nodejs.svg" },
+  { name: "React", path: "/images/tech-logo/original/react.svg" },
+  { name: "React Native", path: "/images/tech-logo/original/react-native.svg" },
   { name: "Next.js", path: "/images/tech-logo/original/nextjs-modified.svg" },
   { name: "TypeScript", path: "/images/tech-logo/original/typescript.svg" },
-  { name: "PostgreSQL", path: "/images/tech-logo/original/postgres.svg" },
-  { name: "MongoDB", path: "/images/tech-logo/original/mongodb.svg" },
   { name: "Tailwind CSS", path: "/images/tech-logo/original/tailwind.svg" },
+  { name: "Node.js", path: "/images/tech-logo/original/nodejs.svg" },
+  { name: "MongoDB", path: "/images/tech-logo/original/mongodb.svg" },
+  { name: "PostgreSQL", path: "/images/tech-logo/original/postgres.svg" },
   { name: "GSAP", path: "/images/tech-logo/original/gsap.svg" },
   { name: "Three.js", path: "/images/tech-logo/original/threejs-modified.svg" },
   { name: "Git", path: "/images/tech-logo/original/git.svg" },
-  { name: "Docker (Basics)", path: "/images/tech-logo/original/docker.svg" },
   { name: "Figma", path: "/images/tech-logo/original/figma.svg" },
 ];
 

@@ -60,7 +60,7 @@ const Hero = () => {
             </p> */}
             <div className="flex flex-col gap-2 text-black-400 dark:text-white-400 md:text-xl relative z-10 pointer-events-none">
               <span>Hi, I'm Rajan,</span>
-              <span>A Software Developer (React & React Native)</span>
+              <span>A Full-Stack Developer (Web & Mobile)</span>
             </div>
             <div className="hero-text text-black-200 dark:text-white-200">
               <div className="flex flex-row flex-wrap items-center">

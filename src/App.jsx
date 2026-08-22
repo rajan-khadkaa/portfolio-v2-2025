@@ -73,6 +73,9 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />} />
+        <Route path="/mobile" element={<MainLayout />} />
+        <Route path="/web" element={<MainLayout />} />
+        <Route path="/design" element={<MainLayout />} />
         <Route path="/hrms" element={<CaseStudyPage slug="hrms" />} />
         <Route path="/safetrack" element={<CaseStudyPage slug="safetrack" />} />
       </Routes>

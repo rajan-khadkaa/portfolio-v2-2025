@@ -9,11 +9,10 @@ import TitleHeader from "../components/TitleHeader";
 const Projects = () => {
   const sectionRef = useRef(null);
   const [domain, setDomain] = useState(() => {
-    const params = new URLSearchParams(window.location.search);
-    const tabParam = params.get("tab");
-    if (tabParam && ["mobile", "web", "design"].includes(tabParam)) {
-      localStorage.setItem("selectedTab", tabParam);
-      return tabParam;
+    const path = window.location.pathname.replace(/^\/|\/$/g, "");
+    if (["mobile", "web", "design"].includes(path)) {
+      localStorage.setItem("selectedTab", path);
+      return path;
     }
     const savedTab = localStorage.getItem("selectedTab");
     if (savedTab && ["mobile", "web", "design"].includes(savedTab)) {
@@ -25,9 +24,7 @@ const Projects = () => {
   const changeTab = (newDomain) => {
     setDomain(newDomain);
     localStorage.setItem("selectedTab", newDomain);
-    const url = new URL(window.location.href);
-    url.searchParams.set("tab", newDomain);
-    window.history.replaceState({}, "", url.toString());
+    window.history.replaceState({}, "", `/${newDomain}`);
   };
 
   const [isDark, setIsDark] = useState(() =>

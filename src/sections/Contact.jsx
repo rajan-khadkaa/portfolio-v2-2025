@@ -65,9 +65,7 @@ const Contact = () => {
               <div className="flex flex-col text-lg">
                 <p className=" mt-6 text-black-400 dark:text-white-400 ">
                   {/* <p className="text-lg max-w-[290px] mt-6 text-gray-400"> */}
-                  I’m a dedicated software developer with a focus on React and
-                  React Native, currently seeking internship where I can grow,
-                  contribute, and learn from real-world projects.
+                  I'm a frontend and mobile developer specializing in React and React Native, with working knowledge of backend and a good eye for UI/UX. Currently seeking opportunities where I can contribute and keep growing
                   <br /> <br /> When I’m not developing, I sketch app ideas,
                   watch classic movies for fun, and keep an eye on tech trends.
                 </p>
