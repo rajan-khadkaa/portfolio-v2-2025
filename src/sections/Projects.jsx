@@ -8,7 +8,27 @@ import TitleHeader from "../components/TitleHeader";
 
 const Projects = () => {
   const sectionRef = useRef(null);
-  const [domain, setDomain] = useState("mobile");
+  const [domain, setDomain] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tabParam = params.get("tab");
+    if (tabParam && ["mobile", "web", "design"].includes(tabParam)) {
+      return tabParam;
+    }
+    const savedTab = sessionStorage.getItem("selectedTab");
+    if (savedTab && ["mobile", "web", "design"].includes(savedTab)) {
+      return savedTab;
+    }
+    return "mobile";
+  });
+
+  const changeTab = (newDomain) => {
+    setDomain(newDomain);
+    sessionStorage.setItem("selectedTab", newDomain);
+    const url = new URL(window.location.href);
+    url.searchParams.set("tab", newDomain);
+    window.history.replaceState({}, "", url.toString());
+  };
+
   const [isDark, setIsDark] = useState(() =>
     document.documentElement.classList.contains("dark"),
   );
@@ -75,7 +95,7 @@ const Projects = () => {
               }}
             >
               <div
-                onClick={() => setDomain(item.domain)}
+                onClick={() => changeTab(item.domain)}
                 className={`${
                   item.domain === domain
                     ? "blue-gradient"

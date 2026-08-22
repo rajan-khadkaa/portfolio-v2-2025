@@ -5,7 +5,7 @@ const safetrack = {
   heroImage: "/case study/safetrack/bg.png",
   metadata: {
     role: "UX Researcher & UI Designer",
-    duration: "3 weeks",
+    duration: "4 weeks",
     tools: "Figma",
     type: "Mobile App Design",
   },
@@ -378,7 +378,7 @@ const hrms = {
   heroImage: "/case study/hrms/bg.png",
   metadata: {
     role: "UX Researcher & UI Designer",
-    duration: "3 weeks",
+    duration: "4 weeks",
     tools: "Figma",
     type: "Web Application Design",
   },

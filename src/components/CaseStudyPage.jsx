@@ -22,10 +22,10 @@ function ScrollProgress() {
   }, []);
 
   return (
-    <div className="fixed top-[0.1rem] left-0 w-full h-1.5 bg-white-200 dark:bg-black-200 z-50">
+    <div className="fixed left-1 top-1/2 -translate-y-1/2 w-0.5 lg:w-1.5 h-[15vh] lg:h-[30vh] bg-white-200 dark:bg-black-200 z-50">
       <div
-        className="h-full bg-black dark:bg-white transition-all duration-75"
-        style={{ width: `${scrollProgress}%` }}
+        className="w-full bg-black dark:bg-white transition-[height] duration-150 ease-out"
+        style={{ height: `${scrollProgress}%` }}
       />
     </div>
   );
@@ -37,7 +37,7 @@ function RenderHeading({ section }) {
   return (
     <h2
       id={section.id}
-      className="font-bold text-2xl md:text-3xl tracking-tight text-black-200 dark:text-white-200 mt-14 mb-4 scroll-mt-20"
+      className="font-bold text-2xl md:text-3xl tracking-tight text-black-200 dark:text-white-200 mt-14 mb-1 scroll-mt-20"
     >
       {section.text}
     </h2>
@@ -51,7 +51,7 @@ function RenderText({ section }) {
       {paragraphs.map((para, i) => (
         <div
           key={i}
-          className="text-black-400 dark:text-white-400 leading-relaxed text-base m-0 animate-fade-in"
+          className="text-gray-500 dark:text-gray-500 leading-[1.8] text-base m-0 animate-fade-in"
           dangerouslySetInnerHTML={{ __html: para }}
         />
       ))}
@@ -96,7 +96,7 @@ function RenderImage({ section, onImageClick }) {
 function RenderList({ section }) {
   if (section.listType === "ordered") {
     return (
-      <ol className="flex flex-col gap-2.5 pl-6 list-decimal text-black-400 dark:text-white-400">
+      <ol className="flex flex-col gap-3 pl-6 list-decimal text-gray-500 dark:text-gray-500">
         {section.items.map((item, i) => (
           <li
             key={i}
@@ -534,14 +534,14 @@ function RelatedStudies({ slugs }) {
         <div className="h-[1px] bg-white-200 dark:bg-black-200" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="flex flex-col gap-6">
         {items.map(({ slug, title, tag }) => (
           <a
             key={slug}
             href={`/${slug}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="no-underline group block p-6 border border-white-200 dark:border-black-200 bg-white-50 dark:bg-black-50 hover:bg-white-100 dark:hover:bg-black-100 transition-all duration-300 rounded-none"
+            className="no-underline group block w-full p-6 border border-white-200 dark:border-black-200 bg-white-50 dark:bg-black-50 hover:bg-white-100 dark:hover:bg-black-100 transition-all duration-300 rounded-none"
           >
             <article className="flex flex-col gap-3">
               {tag && (
@@ -752,7 +752,7 @@ export default function CaseStudyPage({ slug }) {
 
       <main className="bg-white dark:bg-black py-12 px-6 sm:px-8">
         {/* Main Content Wrapper */}
-        <div className="max-w-[780px] mx-auto">
+        <div className="max-w-[700px] mx-auto">
           {/* Eyebrow + Title */}
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-black-400 dark:text-white-400 mb-2">
@@ -763,23 +763,23 @@ export default function CaseStudyPage({ slug }) {
             </h1>
           </div>
 
-          {/* Metadata Block */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 py-6 border-y border-white-200 dark:border-black-200 my-8">
-            <div>
-              <p className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest mb-1.5">Role</p>
-              <p className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.role}</p>
+          {/* Metadata Block - Stacked Vertically with Straight Dividers */}
+          <div className="flex flex-col border-y border-white-100 dark:border-black-100 my-8">
+            <div className="flex flex-col sm:flex-row sm:items-center py-4 border-b border-white-100 dark:border-black-100">
+              <span className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest w-32 shrink-0 mb-1 sm:mb-0">Role</span>
+              <span className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.role}</span>
             </div>
-            <div>
-              <p className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest mb-1.5">Duration</p>
-              <p className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.duration}</p>
+            <div className="flex flex-col sm:flex-row sm:items-center py-4 border-b border-white-100 dark:border-black-100">
+              <span className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest w-32 shrink-0 mb-1 sm:mb-0">Duration</span>
+              <span className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.duration}</span>
             </div>
-            <div>
-              <p className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest mb-1.5">Tools</p>
-              <p className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.tools}</p>
+            <div className="flex flex-col sm:flex-row sm:items-center py-4 border-b border-white-100 dark:border-black-100">
+              <span className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest w-32 shrink-0 mb-1 sm:mb-0">Tools</span>
+              <span className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.tools}</span>
             </div>
-            <div>
-              <p className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest mb-1.5">Type</p>
-              <p className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.type}</p>
+            <div className="flex flex-col sm:flex-row sm:items-center py-4">
+              <span className="text-xs font-bold text-black-600 dark:text-white-600 uppercase tracking-widest w-32 shrink-0 mb-1 sm:mb-0">Type</span>
+              <span className="text-sm font-semibold text-black-200 dark:text-white-200 leading-snug">{study.metadata.type}</span>
             </div>
           </div>
 
@@ -791,7 +791,7 @@ export default function CaseStudyPage({ slug }) {
           <div className="mb-10">
             <button
               onClick={toggleMode}
-              className="py-2.5 px-6 border border-black dark:border-white text-xs font-bold tracking-widest uppercase bg-transparent text-black-200 dark:text-white-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300 cursor-pointer rounded-none"
+              className="py-2.5 px-6 border border-white-400 bg-white-100 dark:border-black-400 dark:bg-black-100 text-sm font-bold tracking-widest  text-black-200 dark:text-white-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300 cursor-pointer rounded-none"
             >
               {showFull ? "Switch to Summary" : "Read Full Case Study"}
             </button>
@@ -808,7 +808,7 @@ export default function CaseStudyPage({ slug }) {
                   Summary
                 </p>
                 <div
-                  className="text-black-400 dark:text-white-400 leading-relaxed text-base"
+                  className="case-study-summary"
                   dangerouslySetInnerHTML={{ __html: study.summary }}
                 />
                 <div className="mt-8 pt-4 border-t border-white-200 dark:border-black-200">
@@ -839,6 +839,8 @@ export default function CaseStudyPage({ slug }) {
         </div>
       </main>
 
+      {/* Footer Separator */}
+      <div className="w-full border-t border-white-200 dark:border-black-200 mt-20" />
       {/* Footer */}
       <Footer />
 

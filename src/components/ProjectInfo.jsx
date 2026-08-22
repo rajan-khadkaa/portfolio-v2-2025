@@ -197,15 +197,17 @@ const ProjectInfo = ({ domainType }) => {
                   </a>
                 )}
                 {domainType === "design" ? (
-                  <Link
+                  <a
                     className="cursor-pointer relative font-medium overflow-hidden group text-black-200 dark:text-white-200 text-xl flex gap-1 items-center justify-center"
-                    to={proj.title === "SafeTrack" ? "/safetrack" : "/hrms"}
+                    href={proj.title === "SafeTrack" ? "/safetrack" : "/hrms"}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <p className="text-base md:text-lg ml-0">Case Study</p>
 
                     <FaArrowUp className="rotate-45" size={15} />
                     <div className="w-[100%] absolute left-0 bottom-0 h-[0.1rem] bg-black dark:bg-white -translate-x-[102%] group-hover:translate-x-0 transition-transform duration-200"></div>
-                  </Link>
+                  </a>
                 ) : (
                   <a
                     className="cursor-pointer relative font-medium overflow-hidden group text-black-200 dark:text-white-200 text-xl flex gap-1 items-center justify-center"

@@ -39,8 +39,7 @@ body {
   justify-content: center;
   /* border: 1px solid red; */
   overflow-x: hidden;
-  background-color: white;
-  /* color: white; */
+  @apply bg-white dark:bg-black text-black-200 dark:text-white-200;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
 }
@@ -512,3 +511,41 @@ section {
     --angle: 360deg;
   }
 }
+
+/* Custom global thin scrollbar with sharp borders */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 0px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #48474b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8d8d8d;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #cecece;
+}
+
+/* Case Study Summary Container Styling */
+.case-study-summary strong {
+  display: block;
+  @apply text-black-200 dark:text-white-200 text-lg font-bold mt-6 mb-2;
+}
+.case-study-summary strong:first-of-type {
+  margin-top: 0;
+}
+.case-study-summary ul {
+  @apply list-disc list-outside pl-5 space-y-2 mb-6;
+}
+.case-study-summary li {
+  @apply text-gray-500 dark:text-gray-500 text-base leading-relaxed;
+}
+
