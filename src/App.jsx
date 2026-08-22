@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Navbar from "./components/Navbar";
@@ -6,8 +7,9 @@ import Workprocess from "./sections/Workprocess";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import CaseStudyPage from "./components/CaseStudyPage";
 
-const App = () => {
+const MainLayout = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   let lastScrollY = useRef(0);
 
@@ -35,7 +37,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full min-h-screen">
       <div
         className={`
           fixed bottom-4 left-1/2 -translate-x-1/2 box-border rounded-full z-40
@@ -56,9 +58,26 @@ const App = () => {
   );
 };
 
+// ScrollToTop component to reset page scroll on route transition
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/hrms" element={<CaseStudyPage slug="hrms" />} />
+        <Route path="/safetrack" element={<CaseStudyPage slug="safetrack" />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
 export default App;
-// <main>
-//   <div>
-//     <h1 className="text-3xl">welcome to my portfolio</h1>
-//   </div>
-// </main>
