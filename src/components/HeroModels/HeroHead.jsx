@@ -118,10 +118,10 @@ const HeroHead = () => {
         {/* <Environment preset="warehouse" intensity={isDark ? 1.2 : 1.8} /> */}
         <Environment
           preset={"warehouse"}
-          // preset={isDark ? "warehouse" : "city"}
-          // intensity={isDark ? 40 : 50}
-          // background={false}
-          // intensity={0.01}
+        // preset={isDark ? "warehouse" : "city"}
+        // intensity={isDark ? 40 : 50}
+        // background={false}
+        // intensity={0.01}
         />
         {/* <Environment preset="apartment" background={false} intensity={0.01} /> */}
 
@@ -153,7 +153,7 @@ const HeroHead = () => {
           // minDistance={5}
           minPolarAngle={Math.PI / 2}
           maxPolarAngle={Math.PI / 2}
-          // target={[-0.3, -0.5, 0]}
+        // target={[-0.3, -0.5, 0]}
         />
         <ControlsUpdater controlsRef={controlRef} />
         {/* Model */}
@@ -167,7 +167,7 @@ const HeroHead = () => {
           position={[0, 0, 0]}
           // position={position}
           rotation={[0, -Math.PI / 1.4, 0]}
-          // remove from here to add in gsap above
+        // remove from here to add in gsap above
         >
           {/* <HeadOpt isDark={isDark} /> */}
           {/* <Helmet /> */}

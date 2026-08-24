@@ -110,11 +110,11 @@ const Hero = () => {
             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-[10%] group-hover:animate-bounce"
               />
               {/* <SecondaryButton className="mt-3" text="View Resume" /> */}
-              <SecondaryButton
+              {/* <SecondaryButton
                 className="w-fit"
                 text="View Resume"
                 icon={true}
-              />
+              /> */}
             </div>
             {/* <div className="w-10 h-5 bg-yellow-400 sm:bg-red-400 md:bg-green-400 lg:bg-blue-500 xl:bg-white-50" /> */}
           </div>
