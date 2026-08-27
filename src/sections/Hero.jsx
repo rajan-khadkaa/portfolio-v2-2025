@@ -114,10 +114,10 @@ const Hero = () => {
                 className="w-fit"
                 text="View Resume"
                 icon={true}
-              />
-            </div> */}
-              {/* <div className="w-10 h-5 bg-yellow-400 sm:bg-red-400 md:bg-green-400 lg:bg-blue-500 xl:bg-white-50" /> */}
+              /> */}
             </div>
+            {/* <div className="w-10 h-5 bg-yellow-400 sm:bg-red-400 md:bg-green-400 lg:bg-blue-500 xl:bg-white-50" /> */}
+          </div>
         </header>
       </div>
       <div className="hero-3d-wrapper">
