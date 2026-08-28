@@ -9,7 +9,7 @@ const SecondaryButton = ({ text, className, btnClick, icon }) => {
     >
       {icon ? (
         <a
-          href={"/Rajan-Khadka-Resume.pdf"}
+          href={"/Rajan_Khadka_Resume.pdf"}
           target="_blank"
           className="transition-colors font-medium duration-300 cursor-pointer bg-none text-black-100 dark:text-white-100 hover:bg-white-100 dark:hover:bg-black-100 px-4 md:px-6 py-4 h-full w-full flex items-center justify-center"
         >
