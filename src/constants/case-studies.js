@@ -24,7 +24,7 @@ const safetrack = {
 
 <strong>Research</strong>
 <ul>
-  <li>Interviewed 8 parents using a conversational, close-circle approach.</li>
+  <li>Interviewed 12 parents using a conversational, close-circle approach.</li>
   <li>Parents felt reactive, not informed. They found out about things too late.</li>
 </ul>
 
@@ -69,19 +69,19 @@ const safetrack = {
     {
       type: "text",
       content:
-        "<b>Who I talked to</b>\n\nI interviewed 8 people from my close circle, family members and neighbors who are parents with school-going children. I chose this approach deliberately. I knew that parents in my context would speak more openly in a familiar, low-pressure setting than in something that felt like a formal study. I wanted honest answers, not polished ones.\n\nI kept the interviews conversational. I asked them about their typical morning routine, what stresses them out about their child's school day, what tools they currently use, and what frustrates them about those tools. I did not lead them toward any particular answer. I just listened.",
+        "<b>Who I talked to</b>\n\nI interviewed 12 people from my close circle, family members and neighbors who are parents with school-going children. I chose this approach deliberately. I knew that parents in my context would speak more openly in a familiar, low-pressure setting than in something that felt like a formal study. I wanted honest answers, not polished ones.\n\nI kept the interviews conversational. I asked them about their typical morning routine, what stresses them out about their child's school day, what tools they currently use, and what frustrates them about those tools. I did not lead them toward any particular answer. I just listened.",
     },
     {
       type: "image",
       src: "/case study/safetrack/safetrack-notes-unorganized.png",
-      alt: "Sticky notes from 8 parent interviews",
+      alt: "Sticky notes from 12 parent interviews",
       caption:
-        "Initial sticky notes from all 8 interviews, before sorting them into themes.",
+        "Initial sticky notes from all 12 interviews, before sorting them into themes.",
     },
     {
       type: "text",
       content:
-        "<b>What I heard</b>\n\nAcross all 8 interviews, a few things kept coming up again and again:",
+        "<b>What I heard</b>\n\nAcross all 12 interviews, a few things kept coming up again and again:",
     },
     {
       type: "list",
@@ -217,7 +217,22 @@ const safetrack = {
     {
       type: "text",
       content:
-        "I tested the wireframe prototype with 5 people. Three of them were from my original interview group and two were people who had not been involved in the project at all. I wanted the familiar group to check whether I had actually addressed their concerns, and I wanted the new group to tell me if the app made sense to someone with no prior context.\n\nI gave each person four tasks:\n\n<ol><li>Find out what time school closes today.</li><li>Check if there are any events this week.</li><li>Locate your child on the map.</li><li>Find the school's emergency contact number.</li></ol>\n\nI watched them try to complete each task without helping them. I only asked follow-up questions after each task was done.",
+        "After creating the wireframes, I tested them with 8 parents. 5 of them were participants from the original interviews, while the other 3 were new participants. I gave each person four tasks:",
+    },
+    {
+      type: "list",
+      listType: "ordered",
+      items: [
+        "Find out what time school closes today.",
+        "Check if there are any events this week.",
+        "Locate your child on the map.",
+        "Find the school's emergency contact number.",
+      ],
+    },
+    {
+      type: "text",
+      content:
+        "I watched them try to complete each task without helping them. I only asked follow-up questions after each task was done.",
     },
     {
       type: "text",
@@ -268,7 +283,7 @@ const safetrack = {
     {
       type: "text",
       content:
-        "I replaced the large warning icon with a short countdown before the alert goes out, with the message itself as the most prominent thing on the screen. View Location and Call 911 sit right below it so a parent can read and respond quickly.\n\nI showed both revised designs to the participants who had given the feedback. Both confirmed that their concerns were resolved. I then tested the revised designs with three new participants who had no knowledge of the earlier versions. All three completed all four tasks without confusion or hesitation.",
+        "I replaced the large warning icon with a short countdown before the alert goes out, with the message itself as the most prominent thing on the screen. View Location and Call 911 sit right below it so a parent can read and respond quickly.\n\nI showed both revised designs to the participants who had given the feedback. They confirmed that their concerns were resolved. I then tested the revised designs with 4 new participants who had no knowledge of the earlier versions. All 4 participants completed all four tasks without confusion or hesitation.",
     },
     {
       type: "heading",
@@ -346,7 +361,7 @@ const safetrack = {
         {
           title: "I would recruit outside my close circle.",
           content:
-            "My 8 interview participants were all from my immediate neighborhood and family network. They were open and honest, which was valuable, but they were also all from a similar background and context. Parents from different areas, different school types, or different income levels might have described the problem very differently. Next time I would put in more effort to reach a wider range of people, even if the sample size stayed the same.",
+            "My 12 interview participants were all from my immediate neighborhood and family network. They were open and honest, which was valuable, but they were also all from a similar background and context. Parents from different areas, different school types, or different income levels might have described the problem very differently. Next time I would put in more effort to reach a wider range of people, even if the sample size stayed the same.",
         },
         {
           title: "I would test earlier and with less polished material.",
